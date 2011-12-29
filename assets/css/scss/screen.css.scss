@@ -68,6 +68,11 @@ em {
     @extend .calluna-italic;
 }
 
+pre {
+    @extend .meslo;
+    color: #fff;
+}
+
 ::-moz-selection { background: #333; color: #fff; text-shadow: none; }
 ::selection { background: #333; color: #fff; text-shadow: none; }
 
@@ -108,7 +113,7 @@ body {
     @extend .single-column;
     @extend .group;
     padding: $base/2 0;
-    margin-bottom: $base;
+    margin-bottom: $base*1.5;
     @extend .divider;
     color: #fffdf7;
 
@@ -149,7 +154,6 @@ body {
         clear: both;
         padding-bottom: $base;
         color: #fffdf7;
-        @include text-shadow( 2px, 2px, #0c0c0d );
 
         h1 {
             @include inline-block( middle );
@@ -168,7 +172,7 @@ body {
 }
 
 .content {
-    margin-bottom: $base;
+    margin-bottom: $base*2;
 }
 
 .articles {
@@ -193,6 +197,10 @@ body {
                 h4 {
                     color: #888;
                 }
+
+                time {
+                    color: #777;
+                }
             }
         }
     }
@@ -208,44 +216,65 @@ body {
         @include transition( all, 0.1s );
     }
 
-    time {
-        color: #444;
+    aside {
+        display: none;
+
+        time {
+            color: #444;
+            @include transition( all, 0.1s );
+        }
     }
 }
 
 #article-page {
 
-    .content {
+    #title {
 
-       // background-color: #fff;
-       time {
-           color: #fff;
-       }
-    }
+        hgroup {
+            @extend .grid-15;
+            float: none;
+            margin: 0 auto;
 
-    article {
-        @extend .single-column;
-        color: #777;
-
-        figure {
-            float: left;
-            margin-right: $base;
-            margin-bottom: $base/4;
-
-            img {
-                max-height: 500px;
-                border: 8px solid #1a1a1a;
-            }
-
-            figcaption {
-                float: right;
-                @extend .small;
+            h1 {
+                margin-bottom: $base/2;
             }
         }
+    }
 
-        aside {
-            margin-bottom: $base/2;
-            color: #fff;
+    .content {
+
+        article {
+            @extend .grid-15;
+            float: none;
+            margin: 0 auto;
+            position: relative;
+            color: #777;
+
+            figure {
+                float: left;
+                margin: 0 auto;
+                margin-right: $base;
+                margin-bottom: $base/4;
+
+                img {
+                    max-height: 500px;
+                    border: 8px solid #1a1a1a;
+                }
+
+                figcaption {
+                    float: right;
+                    @extend .small;
+                }
+            }
+
+            aside {
+                margin-bottom: $base/2;
+                color: #fff;
+
+                time {
+                    @extend .calluna-bold;
+                }
+            }
         }
     }
 }
@@ -280,7 +309,7 @@ footer#global {
 
             a {
                 color: #777;
-                @include transition( all, 0.2s );
+                @include transition( color, 0.2s );
 
                 &:hover {
                     color: $orange;
@@ -294,11 +323,10 @@ footer#global {
 
 
             .author-info {
-                display: block;
                 margin-left: 4em;
 
-                a {
-                    display: block;
+                hgroup {
+                    margin-bottom: $base/2;
                 }
             }
         }

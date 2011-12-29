@@ -81,17 +81,17 @@
   margin: 0 4.082%;
   float: left; }
 
-.grid-15 {
+.grid-15, #article-page #title hgroup, #article-page .content article {
   width: 85.587%;
   margin: 0 4.082%;
   float: left; }
 
-.grid-16, .single-column, #masthead, #title hgroup, #article-page article, footer#global .authors header, footer#global .authors .author, footer#global footer.copyright {
+.grid-16, .single-column, #masthead, #title hgroup, footer#global .authors header, footer#global .authors .author, footer#global footer.copyright {
   width: 91.837%;
   margin: 0 4.082%;
   float: left; }
 
-.webfont, .calluna-regular, body, #masthead nav, .calluna-italic, h2, em, .articles h2, .calluna-bold, footer#global footer.copyright a, .calluna-bold-italic, h1, .serif-bold, .section-heading, #masthead #logo, .serif-italic, .section-heading em, #masthead #logo em {
+.webfont, .calluna-regular, body, #masthead nav, .calluna-italic, h2, em, .articles h2, .calluna-bold, #article-page .content article aside time, footer#global footer.copyright a, .calluna-bold-italic, h1, .serif-bold, .section-heading, #masthead #logo, .serif-italic, .section-heading em, #masthead #logo em {
   font-weight: normal;
   -webkit-font-smoothing: antialiased; }
 
@@ -104,7 +104,7 @@
 .calluna-italic, h2, em, .articles h2 {
   font-family: "CallunaSans-italic", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-.calluna-bold, footer#global footer.copyright a {
+.calluna-bold, #article-page .content article aside time, footer#global footer.copyright a {
   font-family: "CallunaSans-bold", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
 .calluna-bold-italic, h1 {
@@ -116,6 +116,9 @@
 .serif-italic, .section-heading em, #masthead #logo em {
   font-family: "SerifBeta-italic", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
+.meslo, pre {
+  font-family: "Meslo", "Consolas Monaco", "Courier New", "Courier", monospace; }
+
 body {
   font-size: 1em;
   line-height: 1.5em; }
@@ -125,10 +128,10 @@ body {
   font-size: 0.75em;
   line-height: 0.844em; }
 
-.small, h5, #masthead #logo, #masthead nav a, #article-page article figure figcaption, footer#global .authors .author p {
-  /* 14 / 24 */
+.small, h5, #masthead #logo, #masthead nav a, #article-page .content article figure figcaption, footer#global .authors .author p {
+  /* 14 / 30 */
   font-size: 0.875em;
-  line-height: 1.313em; }
+  line-height: 1.641em; }
 
 .normal {
   /* 16 / 24 */
@@ -159,6 +162,9 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-top: 0; }
+
+pre {
+  color: #fff; }
 
 ::-moz-selection {
   background: #333;
@@ -191,7 +197,7 @@ body {
 
 #masthead {
   padding: 0.75em 0;
-  margin-bottom: 1.5em;
+  margin-bottom: 2.25em;
   color: #fffdf7; }
   #masthead a {
     padding: 1.5em 0.75em;
@@ -216,8 +222,7 @@ body {
 #title hgroup {
   clear: both;
   padding-bottom: 1.5em;
-  color: #fffdf7;
-  text-shadow: 2px 2px #0c0c0d; }
+  color: #fffdf7; }
   #title hgroup h1 {
     display: inline-block;
     *display: inline;
@@ -234,7 +239,7 @@ body {
     display: none; }
 
 .content {
-  margin-bottom: 1.5em; }
+  margin-bottom: 3em; }
 
 .articles {
   padding: 1.5em 0; }
@@ -250,6 +255,8 @@ body {
         color: #f27b33; }
       .articles article a:hover h4 {
         color: #888; }
+      .articles article a:hover time {
+        color: #777; }
   .articles h2 {
     color: #fff;
     -webkit-transition: all 0.1s ease-in-out;
@@ -264,23 +271,37 @@ body {
     -o-transition: all 0.1s ease-in-out;
     -ms-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out; }
-  .articles time {
-    color: #444; }
+  .articles aside {
+    display: none; }
+    .articles aside time {
+      color: #444;
+      -webkit-transition: all 0.1s ease-in-out;
+      -moz-transition: all 0.1s ease-in-out;
+      -o-transition: all 0.1s ease-in-out;
+      -ms-transition: all 0.1s ease-in-out;
+      transition: all 0.1s ease-in-out; }
 
-#article-page .content time {
-  color: #fff; }
-#article-page article {
+#article-page #title hgroup {
+  float: none;
+  margin: 0 auto; }
+  #article-page #title hgroup h1 {
+    margin-bottom: 0.75em; }
+#article-page .content article {
+  float: none;
+  margin: 0 auto;
+  position: relative;
   color: #777; }
-  #article-page article figure {
+  #article-page .content article figure {
     float: left;
+    margin: 0 auto;
     margin-right: 1.5em;
     margin-bottom: 0.375em; }
-    #article-page article figure img {
+    #article-page .content article figure img {
       max-height: 500px;
       border: 8px solid #1a1a1a; }
-    #article-page article figure figcaption {
+    #article-page .content article figure figcaption {
       float: right; }
-  #article-page article aside {
+  #article-page .content article aside {
     margin-bottom: 0.75em;
     color: #fff; }
 
@@ -299,20 +320,19 @@ footer#global {
       color: #fff; }
     footer#global .authors .author a {
       color: #777;
-      -webkit-transition: all 0.2s ease-in-out;
-      -moz-transition: all 0.2s ease-in-out;
-      -o-transition: all 0.2s ease-in-out;
-      -ms-transition: all 0.2s ease-in-out;
-      transition: all 0.2s ease-in-out; }
+      -webkit-transition: color 0.2s ease-in-out;
+      -moz-transition: color 0.2s ease-in-out;
+      -o-transition: color 0.2s ease-in-out;
+      -ms-transition: color 0.2s ease-in-out;
+      transition: color 0.2s ease-in-out; }
       footer#global .authors .author a:hover {
         color: #f27b33; }
     footer#global .authors .author p {
       color: #ccc; }
     footer#global .authors .author .author-info {
-      display: block;
       margin-left: 4em; }
-      footer#global .authors .author .author-info a {
-        display: block; }
+      footer#global .authors .author .author-info hgroup {
+        margin-bottom: 0.75em; }
   footer#global footer.copyright {
     text-align: center;
     color: #555; }
@@ -340,7 +360,7 @@ footer#global {
   background-position: left bottom;
   background-repeat: repeat-x; }
 
-@media screen and (min-width: 35em ) {
+@media screen and (min-width: 30em ) {
   body {
     font-size: 1.125em;
     line-height: 1.688em; }
@@ -348,19 +368,6 @@ footer#global {
   h1 {
     font-size: 3.125em;
     line-height: 0.96em; }
-
-  #page-title h1 {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-    vertical-align: middle;
-    margin-right: 0.375em; }
-  #page-title aside {
-    display: inline-block;
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-    vertical-align: middle; }
 
   .articles article a {
     position: relative; }
@@ -373,11 +380,12 @@ footer#global {
       color: #555;
       display: block; }
   .articles article aside {
+    display: block;
     position: absolute;
     left: 0;
     top: 0; }
 
-  #article-page article {
+  #article-page .content article {
     width: 79.337%;
     margin: 0 4.082%;
     float: left;
@@ -394,7 +402,41 @@ footer#global {
     width: 41.837%;
     margin: 0 4.082%;
     float: left; } }
+@media screen and ( min-width: 40em ) {
+  .articles article h2 {
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+  .articles article h4 {
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; }
+  .articles article time {
+    -webkit-transition: color 0.1s ease-in-out;
+    -moz-transition: color 0.1s ease-in-out;
+    -o-transition: color 0.1s ease-in-out;
+    -ms-transition: color 0.1s ease-in-out;
+    transition: color 0.1s ease-in-out; } }
 @media screen and ( min-width: 45em ) {
+  #title hgroup h1 {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+    margin-right: 0.375em; }
+  #title hgroup aside {
+    display: inline-block;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle; }
+    #title hgroup aside h2 {
+      margin-bottom: 0; }
+
   #article-page #title hgroup {
     width: 66.837%;
     margin: 0 4.082%;

@@ -23,6 +23,10 @@
     }
 }
 
+.meslo {
+    font-family: "Meslo", "Consolas Monaco", "Courier New", "Courier", monospace;
+}
+
 $line: 24;
 $font-size: 16;
 $em: $font-size * 1;
@@ -41,9 +45,9 @@ body {
 }
 
 .small {
-    /* 14 / 24 */
+    /* 14 / 30 */
     font-size: #{$font-size * 0.875 / $em}em;
-    line-height: #{$line / $font-size * 0.875}em;
+    line-height: #{$line * 1.25 / $font-size * 0.875}em;
 }
 
 .normal {
