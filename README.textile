@@ -1,3 +1,25 @@
 h1. Getting Started
-# start
-# you're started!
+
+h3. Prerequisites
+
+# A recent version of RVM (with Ruby 1.9.3 installed)
+## Run @rvm list known@ to get a list of rubies that RVM knows about
+## If you don't have 1.9.3 available run @rvm get@ to upgrade RVM to the current version
+## Run @rvm install 1.9.3@ to install Ruby 1.9.3
+# An RVM gemset called _thecoopermen_ created
+## With Ruby 1.9.3 installed, type @rvm use 1.9.3@
+## Type @rvm gemset create thecoopermen@
+
+h3. Configuration
+
+# Clone this repository and @cd@ into the cloned repo's directory
+# When RVM asks if you want to use the project's @.rvmrc@ file answer yes
+# Install bundler with @gem install bundler@
+# Install application dependencies with @bundle install@
+# Copy of @config/database.example.yml@ to @config/database.yml@
+# Run @rake db:create:all@ to create the application database(s)
+# Run @rake db:migrate@ to migrate the database to the newest version
+
+h3. Running
+
+You can run the application with @rails s@ or use something like "pow":http://pow.cx for better performance.
