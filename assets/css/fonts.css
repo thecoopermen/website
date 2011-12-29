@@ -1,0 +1,44 @@
+/* @license
+ * @CallunaSans
+ * MyFonts Webfont Build ID 1801579, 2011-12-25T00:54:02-0500
+ *
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=1801579
+ * Webfonts copyright: Copyright (c) 2010 by Jos Buivenga. All rights reserved.
+ *
+*/
+
+@font-face {font-family: 'CallunaSans-bold-italic';src: url('fonts/CallunaSans/1B7D6B_0_0.eot');src: url('fonts/CallunaSans/1B7D6B_0_0.eot?#iefix') format('embedded-opentype'),url('fonts/CallunaSans/1B7D6B_0_0.woff') format('woff'),url('fonts/CallunaSans/1B7D6B_0_0.ttf') format('truetype');}
+
+@font-face {font-family: 'CallunaSans-italic';src: url('fonts/CallunaSans/1B7D6B_2_0.eot');src: url('fonts/CallunaSans/1B7D6B_2_0.eot?#iefix') format('embedded-opentype'),url('fonts/CallunaSans/1B7D6B_2_0.woff') format('woff'),url('fonts/CallunaSans/1B7D6B_2_0.ttf') format('truetype');}
+
+@font-face {font-family: 'CallunaSans-bold';src: url('fonts/CallunaSans/1B7D6B_3_0.eot');src: url('fonts/CallunaSans/1B7D6B_3_0.eot?#iefix') format('embedded-opentype'),url('fonts/CallunaSans/1B7D6B_3_0.woff') format('woff'),url('fonts/CallunaSans/1B7D6B_3_0.ttf') format('truetype');}
+
+@font-face {font-family: 'CallunaSans-regular';src: url('fonts/CallunaSans/1B7D6B_6_0.eot');src: url('fonts/CallunaSans/1B7D6B_6_0.eot?#iefix') format('embedded-opentype'),url('fonts/CallunaSans/1B7D6B_6_0.woff') format('woff'),url('fonts/CallunaSans/1B7D6B_6_0.ttf') format('truetype');}
+
+@font-face {font-family: 'CallunaSans-light';src: url('fonts/CallunaSans/1B7D6B_9_0.eot');src: url('fonts/CallunaSans/1B7D6B_9_0.eot?#iefix') format('embedded-opentype'),url('fonts/CallunaSans/1B7D6B_9_0.woff') format('woff'),url('fonts/CallunaSans/1B7D6B_9_0.ttf') format('truetype');}
+
+@font-face {
+    font-family: 'SerifBeta-italic';
+    src: url('fonts/SerifBeta/serif6beta-italic-webfont.eot');
+    src: url('fonts/SerifBeta/serif6beta-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SerifBeta/serif6beta-italic-webfont.woff') format('woff'),
+         url('fonts/SerifBeta/serif6beta-italic-webfont.ttf') format('truetype'),
+         url('fonts/SerifBeta/serif6beta-italic-webfont.svg#Serif6BetaItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'SerifBeta-bold';
+    src: url('fonts/SerifBeta/serif6beta-bold-webfont.eot');
+    src: url('fonts/SerifBeta/serif6beta-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SerifBeta/serif6beta-bold-webfont.woff') format('woff'),
+         url('fonts/SerifBeta/serif6beta-bold-webfont.ttf') format('truetype'),
+         url('fonts/SerifBeta/serif6beta-bold-webfont.svg#Serif6BetaBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+

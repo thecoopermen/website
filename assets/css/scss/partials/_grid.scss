@@ -1,7 +1,7 @@
 // edit these values
-$cols: 12;
-$margin: 5;
-$layout-width: 950; 
+$cols: 16;
+$margin: 40;
+$layout-width: 900;
 
 // do not edit these values
 $layout-margin-width: $layout-width + $margin * 2;
@@ -9,8 +9,8 @@ $col-width: $layout-margin-width / $cols;
 $percent-margin: $margin / $layout-margin-width;
 
 // Grid Container
-.grid-container {
-  width: $layout-margin-width + px;
+.wrapper {
+  max-width: $layout-margin-width + px;
   margin: 0 auto;
 
   &:after {
@@ -24,13 +24,35 @@ $percent-margin: $margin / $layout-margin-width;
 
 // Grid Columns
 @for $i from 1 through $cols {
-  .grid-#{$i} {
-    width: ( ($col_width * $i / $layout-margin-width) - 2 * $percent-margin) * 100%;
-    padding: 0;
+
+    .grid-#{$i} {
+        width: ( ($col_width * $i / $layout-margin-width) - 2 * $percent-margin) * 100%;
+        margin: 0 $percent-margin * 100%;
+        float: left;
+    }
+}
+
+@mixin grid( $columns ) {
+    width: ( ($col_width * $columns / $layout-margin-width) - 2 * $percent-margin) * 100%;
     margin: 0 $percent-margin * 100%;
-    display: inline;
     float: left;
-    background-color: #000;
-    height: 1000px;
-  }
+}
+
+@mixin ungrid {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+    float: none;
+}
+
+.single-column {
+    @extend .grid-#{$cols};
+}
+
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 680px) {
+
 }

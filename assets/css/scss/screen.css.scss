@@ -11,6 +11,8 @@
 
 // 0.General
 // 1.Navigation
+// 2.Layouts
+// 3.Extensible Classes
 
 //////////////////////////////////////////////////////////////////
 
@@ -21,17 +23,65 @@
 
 ///////////////////////////////////////
 
+$yellow: #f7c76e;
+$tan: #d8c191;
+$orange: #f27b33;
+
+@import "partials/mixins";
 @import "partials/grid";
+@import "partials/type";
 
-///////////////////////////////////////
+img {
+    max-width: 100%;
+}
 
-// 1.`Navigation
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.2em;
+}
 
-///////////////////////////////////////
+h1 {
+    @extend .massive;
+    @extend .calluna-bold-italic;
+}
 
-#site-nav {
-    p {
-        color: #ebebeb;
+h2 {
+    @extend .large;
+    @extend .calluna-italic;
+}
+
+h3 {
+    @extend .big;
+}
+
+
+h5 {
+    @extend .small;
+
+}
+
+p {
+    margin-top: 0;
+}
+
+em {
+    @extend .calluna-italic;
+}
+
+::-moz-selection { background: #333; color: #fff; text-shadow: none; }
+::selection { background: #333; color: #fff; text-shadow: none; }
+
+.section-heading {
+    color: #fff;
+    padding-left: 25px;
+    @extend .serif-bold;
+    background-image: url('../img/gems.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    em {
+        margin-right: $base/4;
+        @extend .serif-italic;
     }
 }
 
@@ -44,6 +94,257 @@
 
 html,
 body {
-    height : 100%;
-    margin : 0;
+    height: 100%;
+    margin: 0;
 }
+
+body {
+    background-image: url('../img/bg-texture.gif');
+    background-repeat: repeat;
+    background-position: left top;
+}
+
+#masthead {
+    @extend .single-column;
+    @extend .group;
+    padding: $base/2 0;
+    margin-bottom: $base;
+    @extend .divider;
+    color: #fffdf7;
+
+    a {
+        padding: $base $base/2;
+        color: #fff;
+        @include transition( color, 0.2s );
+
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    #logo {
+        @extend .section-heading;
+        padding-left: 25px;
+        @extend .small;
+        display: inline;
+    }
+
+    nav {
+        @extend .calluna-regular;
+        float: right;
+
+        li { display: inline }
+
+        a {
+            display: inline;
+            @extend .small;
+        }
+    }
+}
+
+#title {
+
+    hgroup {
+        @extend .single-column;
+        clear: both;
+        padding-bottom: $base;
+        color: #fffdf7;
+        @include text-shadow( 2px, 2px, #0c0c0d );
+
+        h1 {
+            @include inline-block( middle );
+            margin-right: $base/4;
+        }
+
+        h2 {
+            margin-bottom: $base/2;
+        }
+
+        aside {
+            @include inline-block( middle );
+            display: none;
+        }
+    }
+}
+
+.content {
+    margin-bottom: $base;
+}
+
+.articles {
+    padding: $base 0; 
+
+    article {
+        @include grid( 16 );
+        @extend .group;
+        margin-bottom: $base*1.5;
+
+        a {
+            display: block;
+            @extend .group;
+            cursor: pointer;
+
+            &:hover {
+
+                h2 {
+                    color: $orange;
+                }
+
+                h4 {
+                    color: #888;
+                }
+            }
+        }
+    }
+
+    h2 {
+        @extend .calluna-italic;
+        color: #fff; 
+        @include transition( all, 0.1s );
+    }
+
+    h4 {
+        display: none;
+        @include transition( all, 0.1s );
+    }
+
+    time {
+        color: #444;
+    }
+}
+
+#article-page {
+
+    .content {
+
+       // background-color: #fff;
+       time {
+           color: #fff;
+       }
+    }
+
+    article {
+        @extend .single-column;
+        color: #777;
+
+        figure {
+            float: left;
+            margin-right: $base;
+            margin-bottom: $base/4;
+
+            img {
+                max-height: 500px;
+                border: 8px solid #1a1a1a;
+            }
+
+            figcaption {
+                float: right;
+                @extend .small;
+            }
+        }
+
+        aside {
+            margin-bottom: $base/2;
+            color: #fff;
+        }
+    }
+}
+
+footer#global {
+    color: #fff;
+
+    .authors {
+        @extend .group;
+
+        header {
+            @extend .single-column;
+            padding-bottom: $base/1.5;
+            margin-bottom: $base;
+            @extend .divider;
+        }
+
+        .author {
+            @extend .single-column;
+            @extend .group;
+            padding-bottom: $base;
+
+            .avatar {
+                float: left;
+            }
+
+            h4 {
+                margin: 0;
+                line-height: 1.4em;
+                color: #fff;
+            }
+
+            a {
+                color: #777;
+                @include transition( all, 0.2s );
+
+                &:hover {
+                    color: $orange;
+                }
+            }
+
+            p {
+                @extend .small;
+                color: #ccc;
+            }
+
+
+            .author-info {
+                display: block;
+                margin-left: 4em;
+
+                a {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    footer.copyright {
+        @extend .single-column;
+        @extend .tiny;
+        text-align: center;
+        color: #555;
+
+        a {
+            @extend .calluna-bold;
+            color: #777;
+            @include transition( color, 0.2s );
+
+            &:hover {
+                color: $orange;
+            }
+        }
+    }
+}
+
+
+///////////////////////////////////////
+
+// 3.`Extensible Classes
+
+///////////////////////////////////////
+
+.group {
+    min-height: 1px;
+
+    &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    }
+}
+
+.divider {
+    background-image: url('../img/divider.png');
+    background-position: left bottom;
+    background-repeat: repeat-x;
+}
+
+@import "partials/media";

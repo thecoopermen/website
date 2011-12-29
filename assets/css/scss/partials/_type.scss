@@ -1,0 +1,83 @@
+.webfont {
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+}
+
+.helvetica {
+    font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+@each $weight in regular, italic, bold, bold-italic {
+// Calluna Sans
+    .calluna-#{$weight} {
+        @extend .webfont;
+        font-family: "CallunaSans-#{$weight}", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    }
+}
+
+// Serif Beta
+@each $weight in bold, italic {
+    .serif-#{$weight} {
+        @extend .webfont;
+        font-family: "SerifBeta-#{$weight}", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    }
+}
+
+$line: 24;
+$font-size: 16;
+$em: $font-size * 1;
+$base: $line / $em * 1em;
+
+body {
+    @extend .calluna-regular;
+    font-size: #{$font-size / $em}em;
+    line-height: #{$line / $em}em;
+}
+
+.tiny {
+    /* 11 / 18 */
+    font-size: #{$font-size * 0.75 / $em}em;
+    line-height: #{$line * 0.75 / $font-size * 0.75}em;
+}
+
+.small {
+    /* 14 / 24 */
+    font-size: #{$font-size * 0.875 / $em}em;
+    line-height: #{$line / $font-size * 0.875}em;
+}
+
+.normal {
+    /* 16 / 24 */
+    font-size: #{$font-size / $em}em;
+    line-height: #{$line / $em}em;
+}
+
+.big {
+    /* 24 / 30 */
+    font-size: #{$font-size * 1.25 / $em}em;
+    line-height: #{($line * 1) / ($font-size * 1.25)}em;
+}
+
+.large {
+    /* 24 / 30 */
+    font-size: #{$font-size * 1.5 / $em}em;
+    line-height: #{($line * 1.25) / ($font-size * 1.5)}em;
+}
+
+.huge {
+
+}
+
+.massive {
+    /* 42 / 42 */
+    font-size: #{$font-size * 2.625 / $em}em;
+    line-height: #{($line * 1.75) / ($font-size * 2.625)}em;
+}
+
+.gigantic {
+}
+
+@mixin font( $f, $l ) {
+    font-size: #{$font-size * ($f / $font-size) / $em}em;
+    line-height: #{$line * ($l / $line) / ($font-size * ($f / $font-size) )}em;
+}
