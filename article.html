@@ -30,8 +30,8 @@
         <div class="wrapper">
             <hgroup>
                 <h1>CSS3: There's a mixin for that</h1>
-                <h2><em>Creating a library of mixins for CSS3 using
-                            SASS</em></h2>
+                <h2><em>Creating a library of mixins for CSS3</em></h2>
+                <h4 class="byline"><em>by</em>Jordan Cooperman</h4>
             </hgroup>
         </div>
     </div>
@@ -43,16 +43,24 @@
                     <time datetime="2011-11-13">Posted on: <strong>Nov 13, 2011</strong></time>
                 </aside>
                 <p>
-                    Mixins are small, programmatic chunks of CSS used by CSS precompilers such as SASS and LESS that can be called as functions by CSS selectors and passed optional arguments.
+                    Mixins are small, programmatic chunks of CSS used by CSS precompilers such as SASS and LESS that can be called as functions by CSS selectors and passed optional arguments like the example below.
                 </p>
+                <pre>
+@mixin inline-block( $vertical-align: middle ) {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: $vertical-align;
+}
+                </pre>
                 <p>
                     Because we are precompiling our CSS, mixins are not rendered into CSS unless they are explicitely called by a selector. This means that we can create an extensive library of mixins without paying for it with performance.
                 </p>
                 <p>
-                    Over the last year or so, I have been building a library of mixins to do a variety of tasks, and one of the most valuable tasks that I have found is with regards to CSS3.
+                    Over the last year or so, I have been building a library of mixins with SASS to do a variety of tasks, and one of the most valuable tasks that I have found is with regards to CSS3.
                 </p>
                 <p>
-                    CSS3 is not supported by all browsers, and as a result, browser vendors often use a custom syntax for CSS3 property names that reflects the browser's name and which will be ignored by all other browsers as invalid CSS. This allows vendors to experiment with new techniques without worrying about how the CSS will validate in all browsers.
+                    CSS3 is not supported by all browsers, and as a result, browser vendors often use a custom syntax for CSS3 property names that reflects the browser's name and which will be ignored by all other browsers as invalid CSS. This allows vendors to experiment with new techniques without worrying about how the CSS will validate in other browsers.
                 </p>
                 <p>
                     Unfortunately for us, this means that in many situations, we are faced with several different syntaxes to accomplish the same goal in multiple browsers. Here enters the mixin.
@@ -83,7 +91,7 @@
     border-#{y}-#{$x}: $magnitude;
 }
                 </pre> 
-                <p>Hopefully you're starting to see the power of this technique. I could just as easily make mixins for gradients, drop shadows, or animations. Let's make one for CSS3 transitions now:
+                <p>Hopefully you're starting to see the power of this technique. We could just as easily make mixins for gradients, drop shadows, or animations. Let's make one for CSS3 transitions now:
                 </p>
                 <pre>
 @mixin transition( $property, $time: 0.25s, $effect: ease-in-out ) {
@@ -108,9 +116,12 @@ a {
 }
                 </pre> 
                 <p>
-                    Brilliant, now we've got a color transition on hover with one line of code.
+                    Brilliant, now we've got a color transition on hover with one line of code. 
                 </p>
-                <p>And here's some extra cruff</p>
+                <p>
+                    Hot damn.
+                </p>
+                <p>And here's an example of an image with a caption.</p>
                 <figure>
                     <img src="assets/img/placeholder/post-image.jpg"
                 alt="" />
@@ -119,32 +130,6 @@ a {
                     </aside>
                 </figure>
 
-                <p>Etsy iphone officia, quinoa sapiente cillum cred
-                cliche cosby sweater veniam reprehenderit delectus.
-                Shoreditch proident +1, single-origin coffee commodo
-                fugiat squid quis esse 3 wolf moon cliche freegan. Retro
-                keytar twee qui, trust fund tumblr iphone vice sapiente
-                before they sold out cosby sweater. Iphone before they
-                sold out nostrud, single-origin coffee keffiyeh
-                farm-to-table aliqua salvia sapiente terry richardson.
-                Echo park ethical tumblr williamsburg, non pitchfork raw
-                denim ad pariatur brunch four loko messenger bag carles.
-                Tofu labore mollit wayfarers anim, trust fund
-                adipisicing banh mi consequat. Butcher veniam whatever
-                minim qui etsy carles.</p>
-
-                <p>Et gentrify american apparel raw denim. Jean shorts
-                twee terry richardson readymade quinoa, marfa officia
-                art party placeat fugiat tattooed dolor vegan craft
-                beer. Readymade fanny pack shoreditch, sapiente delectus
-                before they sold out craft beer mlkshk nostrud nesciunt
-                etsy. Whatever food truck sapiente wes anderson, irony
-                synth blog nostrud fugiat brunch banh mi cred salvia.
-                Retro do yr sartorial, before they sold out
-                single-origin coffee mustache. Nihil proident dolore
-                helvetica do, echo park synth culpa whatever assumenda
-                biodiesel messenger bag est pariatur. Fap scenester
-                vegan, Austin food truck retro anim.</p>
                 <footer>
                     <nav class="pagination">
                         <ul>

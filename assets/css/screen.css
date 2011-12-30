@@ -128,7 +128,7 @@ body {
   font-size: 0.688em;
   line-height: 1.636em; }
 
-.small, h5, #masthead #logo, #masthead nav a, #article-page .content article figure figcaption, footer#global .authors .author p {
+.small, h5, #masthead #logo, #masthead nav a, #article-page #title hgroup .byline, #article-page .content article figure figcaption, footer#global .authors .author p {
   /* 14 / 24 */
   font-size: 0.875em;
   line-height: 1.714em; }
@@ -302,6 +302,10 @@ body {
     color: #fff; }
   #article-page #title hgroup h2 {
     color: #fff; }
+  #article-page #title hgroup .byline {
+    color: #d8c191; }
+    #article-page #title hgroup .byline em {
+      margin-right: 0.375em; }
 #article-page .content article {
   float: none;
   margin: 0 auto;
@@ -331,6 +335,7 @@ body {
     padding-bottom: 0.75em;
     margin: 0; }
   #article-page .content article footer .pagination {
+    clear: both;
     padding: 1.5em 0;
     text-align: center; }
     #article-page .content article footer .pagination li {
@@ -458,8 +463,8 @@ footer#global {
     transition: color 0.1s ease-in-out; }
 
   #article-page .content article pre {
-    font-size: 0.875em;
-    line-height: 1.714em; } }
+    font-size: 0.813em;
+    line-height: 1.846em; } }
 @media screen and ( min-width: 45em ) {
   #title hgroup h1 {
     display: inline-block;

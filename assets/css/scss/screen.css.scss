@@ -258,6 +258,15 @@ body {
             h2 {
                 color: #fff;
             }
+
+            .byline {
+                @extend .small;
+                color: $tan;
+
+                em {
+                    margin-right: $base/4;
+                }
+            }
         }
     }
 
@@ -312,6 +321,7 @@ body {
             footer {
 
                 .pagination {
+                    clear: both;
                     padding: $base 0;
                     @extend .big;
                     text-align: center;
