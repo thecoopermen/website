@@ -43,7 +43,7 @@
                     <time datetime="2011-11-13">Posted on: <strong>Nov 13, 2011</strong></time>
                 </aside>
                 <p>
-                    Mixins are small, programmatic chunks of CSS used by CSS precompilers such as SASS and LESS that can be called as functions by CSS selectors and passed optional arguments like the example below.
+                    Mixins are small, programmatic chunks of CSS used by CSS precompilers such as SASS and LESS. In SCSS(a flavor of SASS), they look like this:
                 </p>
                 <pre>
 @mixin inline-block( $vertical-align: middle ) {
@@ -54,19 +54,39 @@
 }
                 </pre>
                 <p>
+                   Mixins can be called as functions by CSS selectors and passed optional arguments:
+
+                </p>
+                <pre>
+.class_name {
+    @include inline-block( middle );
+}
+                </pre>
+                <p>
+                    Once compiled, the above mixin would look like so:
+                </p>
+                <pre>
+.class_name {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+}
+                </pre>
+                <p>
                     Because we are precompiling our CSS, mixins are not rendered into CSS unless they are explicitely called by a selector. This means that we can create an extensive library of mixins without paying for it with performance.
                 </p>
                 <p>
                     Over the last year or so, I have been building a library of mixins with SASS to do a variety of tasks, and one of the most valuable tasks that I have found is with regards to CSS3.
                 </p>
                 <p>
-                    CSS3 is not supported by all browsers, and as a result, browser vendors often use a custom syntax for CSS3 property names that reflects the browser's name and which will be ignored by all other browsers as invalid CSS. This allows vendors to experiment with new techniques without worrying about how the CSS will validate in other browsers.
+                    CSS3 is not supported by all browsers, and as a result, browser vendors often use custom syntaxes for CSS3 property names that reflects the browser's name and which are ignored by all other browsers as invalid CSS. This allows vendors to experiment with new techniques without worrying about how the CSS will validate in other browsers.
                 </p>
                 <p>
-                    Unfortunately for us, this means that in many situations, we are faced with several different syntaxes to accomplish the same goal in multiple browsers. Here enters the mixin.
-                </p> 
+                    Unfortunately for us, this means that in many situations, we are faced with several different syntaxes to accomplish the same goal in multiple browsers.
+                </p>
                 <p>
-                    Here's an example of how we may us mixins to aleviate the pain of multiple vendor selectors for CSS3 rounded corners:
+                    Here's an example of how we can make use of mixins to aleviate the pain of multiple vendor selectors for CSS3 rounded corners:
                 </p>
                 <pre>
 @mixin rounded_corners( $magnitude ) {
