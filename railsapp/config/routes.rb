@@ -1,4 +1,6 @@
 Website::Application.routes.draw do
+  resources :authors
+
   resources :posts, only: [ :index, :show ]
 
   # ActiveAdmin stuff
