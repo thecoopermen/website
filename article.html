@@ -21,7 +21,6 @@
             <nav>
                 <ul>
                     <li><a href="#">Blog</a></li>
-                    <li><a href="#">About</a></li>
                 </ul>
             </nav>
         </header>
@@ -44,7 +43,7 @@
                     <time datetime="2011-11-13">Posted on: <strong>Nov 13, 2011</strong></time>
                 </aside>
                 <p>This is a very simple concept, but one that has saved me a lot of time and the frustration of looking up the correct syntax and vendor selectors of CSS3 declarations.</p> 
-                    <p>For all those who are not yet using a CSS precompiler, such as SASS, or LESS, it's about time that you gave it a shot. Your efforts will be rewarded. For all of those who are, I will be using SCSS (a flavor of SASS) to demonstrate.
+                    <p>For all those who are not yet using a CSS precompiler, such as SASS, or LESS, it's about time that you gave it a shot. Your efforts will be rewarded. For all of those who are, I will be using SCSS (a flavor of SASS).
                 </p>
                 <p>I have been adding to my library of mixins for about a year now, and the best part is that I am continually building something useful for all future projects.</p>
                 <p>Mixins are little chunks of programmatic CSS that can be called inside of any class and passed custom values, so you can imagine how useful they might be when creating effects that have various options and magnitudes. Here's an example of one that I use all the time.</p>
@@ -60,10 +59,10 @@
                 </p>
                 <pre>
 .class_name {
-    @include rounded( 5px );
+    @include rounded_corners( 5px );
 }
                 </pre>
-                <p>Hott. We could even take it a little further, and make another mixin to round a specific corner.</p> 
+                <p>Hot. We could even take it a little further, and make another mixin to round a specific corner.</p> 
                 <pre>
 @mixin rounded_corner( $magnitude, $x, $y ) {
     -moz-border-radius-#{$y}#{$x}: $magnitude;
@@ -109,6 +108,21 @@
                 helvetica do, echo park synth culpa whatever assumenda
                 biodiesel messenger bag est pariatur. Fap scenester
                 vegan, Austin food truck retro anim.</p>
+                <footer>
+                    <nav class="pagination">
+                        <ul>
+                            <li class="older">
+                                <a href="#">&#139;&nbsp;Older</a>
+                            </li>
+                            <li class="back">
+                                <a href="#">Back to articles</a>
+                            </li>
+                            <li class="newer">
+                                <a href="#">Newer&nbsp;&#155;</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </footer>
             </article>
         </div>
     </div>

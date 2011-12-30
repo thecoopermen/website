@@ -138,7 +138,7 @@ body {
   font-size: 1em;
   line-height: 1.5em; }
 
-.big, h3 {
+.big, h3, #article-page .content article footer .pagination {
   /* 24 / 30 */
   font-size: 1.25em;
   line-height: 1.2em; }
@@ -162,6 +162,16 @@ img {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.2em; }
+
+a {
+  color: #fff;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out; }
+  a:hover {
+    color: #f27b33; }
 
 p {
   margin-top: 0; }
@@ -203,18 +213,17 @@ body {
   margin-bottom: 2.25em;
   color: #fffdf7; }
   #masthead a {
-    padding: 1.5em 0.75em;
-    color: #fff;
-    -webkit-transition: color 0.2s ease-in-out;
-    -moz-transition: color 0.2s ease-in-out;
-    -o-transition: color 0.2s ease-in-out;
-    -ms-transition: color 0.2s ease-in-out;
-    transition: color 0.2s ease-in-out; }
-    #masthead a:hover {
-      color: #f27b33; }
+    padding: 1.5em 0.75em; }
   #masthead #logo {
     padding-left: 25px;
-    display: inline; }
+    display: inline;
+    -webkit-transition: color 0.25s ease-in-out;
+    -moz-transition: color 0.25s ease-in-out;
+    -o-transition: color 0.25s ease-in-out;
+    -ms-transition: color 0.25s ease-in-out;
+    transition: color 0.25s ease-in-out; }
+    #masthead #logo:hover {
+      color: #f27b33; }
   #masthead nav {
     float: right; }
     #masthead nav li {
@@ -312,13 +321,22 @@ body {
     margin-bottom: 0.75em;
     color: #fff; }
     #article-page .content article aside time {
-      color: #777; }
+      color: #555; }
       #article-page .content article aside time strong {
         margin-left: 0.375em;
-        color: #f7c76e; }
+        color: #888; }
   #article-page .content article pre {
     padding: 0.75em 0;
     margin: 0; }
+  #article-page .content article footer .pagination {
+    padding: 1.5em 0;
+    text-align: center; }
+    #article-page .content article footer .pagination li {
+      display: inline; }
+    #article-page .content article footer .pagination .older {
+      float: left; }
+    #article-page .content article footer .pagination .newer {
+      float: right; }
 
 footer#global {
   color: #fff; }

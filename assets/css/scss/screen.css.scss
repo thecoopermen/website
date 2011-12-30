@@ -62,6 +62,15 @@ h5 {
 
 }
 
+a {
+    color: #fff;
+    @include transition( color, 0.2s );
+
+    &:hover {
+        color: $orange;
+    }
+}
+
 p {
     margin-top: 0;
 }
@@ -125,12 +134,6 @@ body {
 
     a {
         padding: $base $base/2;
-        color: #fff;
-        @include transition( color, 0.2s );
-
-        &:hover {
-            color: $orange;
-        }
     }
 
     #logo {
@@ -138,6 +141,11 @@ body {
         padding-left: 25px;
         @extend .small;
         display: inline;
+        @include transition( color );
+
+        &:hover {
+            color: $orange;
+        }
     }
 
     nav {
@@ -284,11 +292,11 @@ body {
                 color: #fff;
 
                 time {
-                    color: #777;
+                    color: #555;
 
                     strong {
                         margin-left: $base/4;
-                        color: $yellow;
+                        color: #888;
                     }
                 }
             }
@@ -297,6 +305,27 @@ body {
                 padding: $base/2 0;
                 margin: 0;
                 @extend .tiny;
+            }
+
+            footer {
+
+                .pagination {
+                    padding: $base 0;
+                    @extend .big;
+                    text-align: center;
+
+                    li {
+                        display: inline;
+                    }
+
+                    .older {
+                        float: left;
+                    }
+
+                    .newer {
+                        float: right;
+                    }
+                }
             }
         }
     }
