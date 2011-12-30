@@ -177,6 +177,7 @@ p {
   margin-top: 0; }
 
 pre {
+  padding-left: 0.75em;
   color: #d8c191; }
 
 ::-moz-selection {
@@ -326,7 +327,8 @@ body {
         margin-left: 0.375em;
         color: #888; }
   #article-page .content article pre {
-    padding: 0.75em 0;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
     margin: 0; }
   #article-page .content article footer .pagination {
     padding: 1.5em 0;

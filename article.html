@@ -42,11 +42,24 @@
                 <aside>
                     <time datetime="2011-11-13">Posted on: <strong>Nov 13, 2011</strong></time>
                 </aside>
-                <p>This is a very simple concept, but one that has saved me a lot of time and the frustration of looking up the correct syntax and vendor selectors of CSS3 declarations.</p> 
-                    <p>For all those who are not yet using a CSS precompiler, such as SASS, or LESS, it's about time that you gave it a shot. Your efforts will be rewarded. For all of those who are, I will be using SCSS (a flavor of SASS).
+                <p>
+                    Mixins are small, programmatic chunks of CSS used by CSS precompilers such as SASS and LESS that can be called as functions by CSS selectors and passed optional arguments.
                 </p>
-                <p>I have been adding to my library of mixins for about a year now, and the best part is that I am continually building something useful for all future projects.</p>
-                <p>Mixins are little chunks of programmatic CSS that can be called inside of any class and passed custom values, so you can imagine how useful they might be when creating effects that have various options and magnitudes. Here's an example of one that I use all the time.</p>
+                <p>
+                    Because we are precompiling our CSS, mixins are not rendered into CSS unless they are explicitely called by a selector. This means that we can create an extensive library of mixins without paying for it with performance.
+                </p>
+                <p>
+                    Over the last year or so, I have been building a library of mixins to do a variety of tasks, and one of the most valuable tasks that I have found is with regards to CSS3.
+                </p>
+                <p>
+                    CSS3 is not supported by all browsers, and as a result, browser vendors often use a custom syntax for CSS3 property names that reflects the browser's name and which will be ignored by all other browsers as invalid CSS. This allows vendors to experiment with new techniques without worrying about how the CSS will validate in all browsers.
+                </p>
+                <p>
+                    Unfortunately for us, this means that in many situations, we are faced with several different syntaxes to accomplish the same goal in multiple browsers. Here enters the mixin.
+                </p> 
+                <p>
+                    Here's an example of how we may us mixins to aleviate the pain of multiple vendor selectors for CSS3 rounded corners:
+                </p>
                 <pre>
 @mixin rounded_corners( $magnitude ) {
     -moz-border-radius: $magnitude;
@@ -55,14 +68,14 @@
     -khtml-border-radius $magnitude;
 }
                 </pre>
-                <p>And just like that, we have a pretty lil' rounded corner function that can be called with one line.
+                <p>And just like that, we have a pretty lil' rounded corners function that can be called with one line of code and will work in all modern browsers that support rounded corners. Let's use it:
                 </p>
                 <pre>
 .class_name {
     @include rounded_corners( 5px );
 }
                 </pre>
-                <p>Hot. We could even take it a little further, and make another mixin to round a specific corner.</p> 
+                <p>Hot. We could take it even further and make another mixin to round a specific corner:</p> 
                 <pre>
 @mixin rounded_corner( $magnitude, $x, $y ) {
     -moz-border-radius-#{$y}#{$x}: $magnitude;
@@ -70,9 +83,33 @@
     border-#{y}-#{$x}: $magnitude;
 }
                 </pre> 
-                <p>Hopefully you're starting to see the power of this technique. I could just as easily make mixins for gradients, drop shadows, or animations to my hearts content.
+                <p>Hopefully you're starting to see the power of this technique. I could just as easily make mixins for gradients, drop shadows, or animations. Let's make one for CSS3 transitions now:
                 </p>
+                <pre>
+@mixin transition( $property, $time: 0.25s, $effect: ease-in-out ) {
+    -webkit-transition: $property $time $effect;
+    -moz-transition: $property $time $effect;
+    -o-transition: $property $time $effect;
+    -ms-transition: $property $time $effect;
+    transition: $property $time $effect;
+}
+                </pre>
+                <p>
+                    That's just marvelous, let's use it:
+                </p>
+                <pre>
+a {
+    color: #333;
+    @include transition( color, 0.2s );
 
+    &:hover {
+        color: #ff0000;
+    }
+}
+                </pre> 
+                <p>
+                    Brilliant, now we've got a color transition on hover with one line of code.
+                </p>
                 <p>And here's some extra cruff</p>
                 <figure>
                     <img src="assets/img/placeholder/post-image.jpg"
