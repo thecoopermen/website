@@ -41,35 +41,40 @@
         <div class="wrapper">
             <article>
                 <aside>
-                    <time datetime="2011-11-13">Nov 13, 2011</time>
+                    <time datetime="2011-11-13">Posted on: <strong>Nov 13, 2011</strong></time>
                 </aside>
-                <p>Etsy iphone officia, quinoa sapiente cillum cred cliche cosby
-                sweater veniam reprehenderit delectus. Shoreditch proident +1,
-                single-origin coffee commodo fugiat squid quis esse 3 wolf moon
-                cliche freegan. Retro keytar twee qui, trust fund tumblr iphone vice
-                sapiente before they sold out cosby sweater.
+                <p>This is a very simple concept, but one that has saved me a lot of time and the frustration of looking up the correct syntax and vendor selectors of CSS3 declarations.</p> 
+                    <p>For all those who are not yet using a CSS precompiler, such as SASS, or LESS, it's about time that you gave it a shot. Your efforts will be rewarded. For all of those who are, I will be using SCSS (a flavor of SASS) to demonstrate.
                 </p>
-                <pre>var bullocks = {};</pre>
-                <p>
-                Iphone before they sold
-                out nostrud, single-origin coffee keffiyeh farm-to-table aliqua
-                salvia sapiente terry richardson. Echo park ethical tumblr
-                williamsburg, non pitchfork raw denim ad pariatur brunch four loko
-                messenger bag carles. Tofu labore mollit wayfarers anim, trust fund
-                adipisicing banh mi consequat. Butcher veniam whatever minim qui
-                etsy carles.</p>
+                <p>I have been adding to my library of mixins for about a year now, and the best part is that I am continually building something useful for all future projects.</p>
+                <p>Mixins are little chunks of programmatic CSS that can be called inside of any class and passed custom values, so you can imagine how useful they might be when creating effects that have various options and magnitudes. Here's an example of one that I use all the time.</p>
+                <pre>
+@mixin rounded_corners( $magnitude ) {
+    -moz-border-radius: $magnitude;
+    -webkit-border-radius: $magnitude;
+    border-radius: $magnitude;
+    -khtml-border-radius $magnitude;
+}
+                </pre>
+                <p>And just like that, we have a pretty lil' rounded corner function that can be called with one line.
+                </p>
+                <pre>
+.class_name {
+    @include rounded( 5px );
+}
+                </pre>
+                <p>Hott. We could even take it a little further, and make another mixin to round a specific corner.</p> 
+                <pre>
+@mixin rounded_corner( $magnitude, $x, $y ) {
+    -moz-border-radius-#{$y}#{$x}: $magnitude;
+    -webkit-border-#{$y}#{$x}: $magnitude;
+    border-#{y}-#{$x}: $magnitude;
+}
+                </pre> 
+                <p>Hopefully you're starting to see the power of this technique. I could just as easily make mixins for gradients, drop shadows, or animations to my hearts content.
+                </p>
 
-                <p>Et gentrify american apparel raw denim. Jean shorts twee terry
-                richardson readymade quinoa, marfa officia art party placeat fugiat
-                tattooed dolor vegan craft beer. Readymade fanny pack shoreditch,
-                sapiente delectus before they sold out craft beer mlkshk nostrud
-                nesciunt etsy. Whatever food truck sapiente wes anderson, irony
-                synth blog nostrud fugiat brunch banh mi cred salvia. Retro do yr
-                sartorial, before they sold out single-origin coffee mustache. Nihil
-                proident dolore helvetica do, echo park synth culpa whatever
-                assumenda biodiesel messenger bag est pariatur. Fap scenester vegan,
-                Austin food truck retro anim.</p> 
-
+                <p>And here's some extra cruff</p>
                 <figure>
                     <img src="assets/img/placeholder/post-image.jpg"
                 alt="" />

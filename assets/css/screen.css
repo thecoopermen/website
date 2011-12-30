@@ -91,7 +91,7 @@
   margin: 0 4.082%;
   float: left; }
 
-.webfont, .calluna-regular, body, #masthead nav, .calluna-italic, h2, em, .articles h2, .calluna-bold, #article-page .content article aside time, footer#global footer.copyright a, .calluna-bold-italic, h1, .serif-bold, .section-heading, #masthead #logo, .serif-italic, .section-heading em, #masthead #logo em {
+.webfont, .calluna-regular, body, #masthead nav, .calluna-italic, h2, em, .articles h2, .calluna-bold, strong, footer#global footer.copyright a, .calluna-bold-italic, h1, .serif-bold, .section-heading, #masthead #logo, .serif-italic, .section-heading em, #masthead #logo em {
   font-weight: normal;
   -webkit-font-smoothing: antialiased; }
 
@@ -104,7 +104,7 @@
 .calluna-italic, h2, em, .articles h2 {
   font-family: "CallunaSans-italic", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-.calluna-bold, #article-page .content article aside time, footer#global footer.copyright a {
+.calluna-bold, strong, footer#global footer.copyright a {
   font-family: "CallunaSans-bold", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
 .calluna-bold-italic, h1 {
@@ -123,15 +123,15 @@ body {
   font-size: 1em;
   line-height: 1.5em; }
 
-.tiny, footer#global footer.copyright {
+.tiny, #article-page .content article pre, footer#global footer.copyright {
   /* 11 / 18 */
-  font-size: 0.75em;
-  line-height: 0.844em; }
+  font-size: 0.688em;
+  line-height: 1.636em; }
 
 .small, h5, #masthead #logo, #masthead nav a, #article-page .content article figure figcaption, footer#global .authors .author p {
-  /* 14 / 30 */
+  /* 14 / 24 */
   font-size: 0.875em;
-  line-height: 1.641em; }
+  line-height: 1.714em; }
 
 .normal {
   /* 16 / 24 */
@@ -149,12 +149,15 @@ body {
   line-height: 1.25em; }
 
 .massive, h1 {
-  /* 42 / 42 */
+  /* 42 / 48 */
   font-size: 2.625em;
-  line-height: 1em; }
+  line-height: 1.143em; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-topleft: 5px;
+  border-y-left: 5px; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -164,7 +167,7 @@ p {
   margin-top: 0; }
 
 pre {
-  color: #fff; }
+  color: #d8c191; }
 
 ::-moz-selection {
   background: #333;
@@ -221,7 +224,7 @@ body {
 
 #title hgroup {
   clear: both;
-  padding-bottom: 1.5em;
+  padding-bottom: 2.25em;
   color: #fffdf7; }
   #title hgroup h1 {
     display: inline-block;
@@ -230,7 +233,7 @@ body {
     vertical-align: middle;
     margin-right: 0.375em; }
   #title hgroup h2 {
-    margin-bottom: 0.75em; }
+    margin-bottom: 0.375em; }
   #title hgroup aside {
     display: inline-block;
     *display: inline;
@@ -285,17 +288,21 @@ body {
   float: none;
   margin: 0 auto; }
   #article-page #title hgroup h1 {
-    margin-bottom: 0.75em; }
+    margin-bottom: 0.375em;
+    color: #fff; }
+  #article-page #title hgroup h2 {
+    color: #fff; }
 #article-page .content article {
   float: none;
   margin: 0 auto;
   position: relative;
-  color: #777; }
+  color: #e5e5e5; }
   #article-page .content article figure {
     float: left;
     margin: 0 auto;
     margin-right: 1.5em;
-    margin-bottom: 0.375em; }
+    margin-bottom: 0.375em;
+    color: #fffdf7; }
     #article-page .content article figure img {
       max-height: 500px;
       border: 8px solid #1a1a1a; }
@@ -304,6 +311,14 @@ body {
   #article-page .content article aside {
     margin-bottom: 0.75em;
     color: #fff; }
+    #article-page .content article aside time {
+      color: #777; }
+      #article-page .content article aside time strong {
+        margin-left: 0.375em;
+        color: #f7c76e; }
+  #article-page .content article pre {
+    padding: 0.75em 0;
+    margin: 0; }
 
 footer#global {
   color: #fff; }
@@ -385,14 +400,14 @@ footer#global {
     left: 0;
     top: 0; }
 
-  #article-page .content article {
-    width: 79.337%;
+  #article-page #title hgroup {
+    width: 66.837%;
     margin: 0 4.082%;
     float: left;
     float: none;
     margin: 0 auto; }
-  #article-page #title hgroup {
-    width: 79.337%;
+  #article-page .content article {
+    width: 66.837%;
     margin: 0 4.082%;
     float: left;
     float: none;
@@ -420,7 +435,11 @@ footer#global {
     -moz-transition: color 0.1s ease-in-out;
     -o-transition: color 0.1s ease-in-out;
     -ms-transition: color 0.1s ease-in-out;
-    transition: color 0.1s ease-in-out; } }
+    transition: color 0.1s ease-in-out; }
+
+  #article-page .content article pre {
+    font-size: 0.875em;
+    line-height: 1.714em; } }
 @media screen and ( min-width: 45em ) {
   #title hgroup h1 {
     display: inline-block;
@@ -438,13 +457,13 @@ footer#global {
       margin-bottom: 0; }
 
   #article-page #title hgroup {
-    width: 66.837%;
+    width: 54.337%;
     margin: 0 4.082%;
     float: left;
     float: none;
     margin: 0 auto; }
   #article-page .content article {
-    width: 66.837%;
+    width: 54.337%;
     margin: 0 4.082%;
     float: left;
     float: none;

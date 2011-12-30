@@ -1,4 +1,6 @@
 
+
+
 @media screen and (min-width: 30em ) {
 
     body {
@@ -46,18 +48,18 @@
 
     #article-page {
 
-        .content {
-            article {
-                @include grid( 14 );
+        #title {
+
+            hgroup {
+                @include grid( 12 );
                 float: none;
                 margin: 0 auto;
             }
         }
 
-        #title {
-
-            hgroup {
-                @include grid( 14 );
+        .content {
+            article {
+                @include grid( 12 );
                 float: none;
                 margin: 0 auto;
             }
@@ -83,6 +85,7 @@
     .articles {
 
         article {
+
             h2 {
                 @include transition( color, 0.1s );
             }
@@ -93,6 +96,19 @@
 
             time {
                 @include transition( color, 0.1s );
+            }
+        }
+    }
+
+    #article-page {
+
+        .content {
+
+            article {
+
+                pre {
+                    @include font( 14, 24 );
+                }
             }
         }
     }
@@ -126,7 +142,7 @@
         #title {
 
             hgroup {
-                @include grid( 12 );
+                @include grid( 10 );
                 float: none;
                 margin: 0 auto;
             }
@@ -135,7 +151,7 @@
         .content {
 
             article {
-                @include grid( 12 );
+                @include grid( 10 );
                 float: none;
                 margin: 0 auto;
                 position: relative;
@@ -187,6 +203,15 @@
                     @include grid( 8 );
                     color: #666;
                 }
+            }
+        }
+    }
+
+    #article-page {
+
+        .content {
+
+            article {
             }
         }
     }

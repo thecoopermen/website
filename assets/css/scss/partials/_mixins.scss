@@ -33,7 +33,7 @@
 
 /* triangles */
 
-@mixin triangle($size: 7px, $position: "bottom", $color: #999, $centered: false) {
+@mixin triangle($size: 7px, $position: "bottom", $color: #999) {
     height       : 0;
     width        : 0;
     border-style : solid;
@@ -50,14 +50,15 @@
     @if $position == "right" {
         border-color : transparent $color transparent transparent;
     }
-    @if $centered == true {
-        position: absolute;
-        left         : 50%;
-        margin-left  : $size * -1;
-    }
 }
 
 /* css3 */
+
+@mixin rounded_corner( $magnitude, $x, $y ) {
+    -moz-border-radius-#{$y}#{$x}: $magnitude;
+    -webkit-border-#{$y}#{$x}: $magnitude;
+    border-#{y}-#{$x}: $magnitude;
+}
 
 @mixin gradient($start-color: #222, $end-color: #000 ) {
    background-color: $end-color;

@@ -40,14 +40,14 @@ body {
 
 .tiny {
     /* 11 / 18 */
-    font-size: #{$font-size * 0.75 / $em}em;
-    line-height: #{$line * 0.75 / $font-size * 0.75}em;
+    font-size: #{$font-size * 0.6875 / $em}em;
+    line-height: #{($line * 0.75) / ($font-size * 0.6875)}em;
 }
 
 .small {
-    /* 14 / 30 */
+    /* 14 / 24 */
     font-size: #{$font-size * 0.875 / $em}em;
-    line-height: #{$line * 1.25 / $font-size * 0.875}em;
+    line-height: #{($line) / ($font-size * 0.875)}em;
 }
 
 .normal {
@@ -73,9 +73,9 @@ body {
 }
 
 .massive {
-    /* 42 / 42 */
+    /* 42 / 48 */
     font-size: #{$font-size * 2.625 / $em}em;
-    line-height: #{($line * 1.75) / ($font-size * 2.625)}em;
+    line-height: #{($line * 2) / ($font-size * 2.625)}em;
 }
 
 .gigantic {
