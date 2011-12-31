@@ -315,6 +315,12 @@ body {
   margin: 0 auto;
   position: relative;
   color: #e5e5e5; }
+  #article-page .content article a {
+    text-decoration: underline; }
+  #article-page .content article pre {
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+    margin: 0; }
   #article-page .content article figure {
     float: left;
     margin: 0 auto;
@@ -334,10 +340,6 @@ body {
       #article-page .content article aside time strong {
         margin-left: 0.375em;
         color: #888; }
-  #article-page .content article pre {
-    padding-top: 0.75em;
-    padding-bottom: 0.75em;
-    margin: 0; }
   #article-page .content article footer .pagination {
     clear: both;
     padding: 1.5em 0;
