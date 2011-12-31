@@ -4,6 +4,7 @@
 <head>
     <title>The Coopermen - Writings</title>
 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/fonts.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/screen.css" />
@@ -20,7 +21,7 @@
             <a id="logo" href="index.html"><em>The</em>Coopermen</a>
             <nav>
                 <ul>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="#" class="rss">rss</a></li>
                 </ul>
             </nav>
         </header>
@@ -31,7 +32,7 @@
             <hgroup>
                 <h1>CSS3: There's a mixin for that</h1>
                 <h2><em>Creating a library of mixins for CSS3</em></h2>
-                <h4 class="byline"><em>by</em>Jordan Cooperman</h4>
+                <h4 class="byline"><em>by Jordan Cooperman</em></h4>
             </hgroup>
         </div>
     </div>
@@ -43,7 +44,7 @@
                     <time datetime="2011-11-13">Posted on: <strong>Nov 13, 2011</strong></time>
                 </aside>
                 <p>
-                    Mixins are small, programmatic chunks of CSS used by CSS precompilers such as SASS and LESS. In SCSS(a flavor of SASS), they look like this:
+                    Mixins are small, programmatic chunks of CSS used by CSS precompilers such as SASS and LESS. In SCSS (a flavor of SASS), they look like this:
                 </p>
                 <pre>
 @mixin inline-block( $vertical-align: middle ) {
@@ -63,7 +64,7 @@
 }
                 </pre>
                 <p>
-                    Once compiled, the above mixin would look like so:
+                    Once compiled, the above mixin would look like this:
                 </p>
                 <pre>
 .class_name {
@@ -83,10 +84,10 @@
                     CSS3 is not supported by all browsers, and as a result, browser vendors often use custom syntaxes for CSS3 property names that reflects the browser's name and which are ignored by all other browsers as invalid CSS. This allows vendors to experiment with new techniques without worrying about how the CSS will validate in other browsers.
                 </p>
                 <p>
-                    Unfortunately for us, this means that in many situations, we are faced with several different syntaxes to accomplish the same goal in multiple browsers.
+                    While this is a great solution for evolving browsers, it unfortunately means that we are often faced with several different syntaxes for the same CSS3 property in different browsers. So let's aleviate that pain using mixins.
                 </p>
                 <p>
-                    Here's an example of how we can make use of mixins to aleviate the pain of multiple vendor selectors for CSS3 rounded corners:
+                    To start, let's use an SCSS mixin to create rounded corners:
                 </p>
                 <pre>
 @mixin rounded_corners( $magnitude ) {
@@ -114,7 +115,7 @@
                 <p>Hopefully you're starting to see the power of this technique. We could just as easily make mixins for gradients, drop shadows, or animations. Let's make one for CSS3 transitions now:
                 </p>
                 <pre>
-@mixin transition( $property, $time: 0.25s, $effect: ease-in-out ) {
+@mixin transition( $property, $time, $effect: ease-in-out ) {
     -webkit-transition: $property $time $effect;
     -moz-transition: $property $time $effect;
     -o-transition: $property $time $effect;
@@ -155,9 +156,6 @@ a {
                         <ul>
                             <li class="older">
                                 <a href="#">&#139;&nbsp;Older</a>
-                            </li>
-                            <li class="back">
-                                <a href="#">Back to articles</a>
                             </li>
                             <li class="newer">
                                 <a href="#">Newer&nbsp;&#155;</a>

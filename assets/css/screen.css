@@ -91,17 +91,17 @@
   margin: 0 4.082%;
   float: left; }
 
-.webfont, .calluna-regular, body, #masthead nav, .calluna-italic, h2, em, .articles h2, .calluna-bold, strong, footer#global footer.copyright a, .calluna-bold-italic, h1, .serif-bold, .section-heading, #masthead #logo, .serif-italic, .section-heading em, #masthead #logo em {
+.webfont, .calluna-regular, body, .calluna-italic, h2, em, .articles h2, #article-page .content article footer .pagination, .calluna-bold, strong, footer#global footer.copyright a, .calluna-bold-italic, h1, .serif-bold, .section-heading, #masthead #logo, .serif-italic, .section-heading em, #masthead #logo em, #masthead nav {
   font-weight: normal;
   -webkit-font-smoothing: antialiased; }
 
 .helvetica {
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-.calluna-regular, body, #masthead nav {
+.calluna-regular, body {
   font-family: "CallunaSans-regular", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-.calluna-italic, h2, em, .articles h2 {
+.calluna-italic, h2, em, .articles h2, #article-page .content article footer .pagination {
   font-family: "CallunaSans-italic", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
 .calluna-bold, strong, footer#global footer.copyright a {
@@ -113,7 +113,7 @@
 .serif-bold, .section-heading, #masthead #logo {
   font-family: "SerifBeta-bold", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-.serif-italic, .section-heading em, #masthead #logo em {
+.serif-italic, .section-heading em, #masthead #logo em, #masthead nav {
   font-family: "SerifBeta-italic", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
 .meslo, pre {
@@ -215,6 +215,8 @@ body {
   color: #fffdf7; }
   #masthead a {
     padding: 1.5em 0.75em; }
+    #masthead a.rss {
+      padding-left: 16px; }
   #masthead #logo {
     padding-left: 25px;
     display: inline;
@@ -272,38 +274,40 @@ body {
         color: #777; }
   .articles h2 {
     color: #fff;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    -ms-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out; }
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
   .articles h4 {
     display: none;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    -ms-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out; }
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
   .articles aside {
     display: none; }
     .articles aside time {
       color: #444;
-      -webkit-transition: all 0.1s ease-in-out;
-      -moz-transition: all 0.1s ease-in-out;
-      -o-transition: all 0.1s ease-in-out;
-      -ms-transition: all 0.1s ease-in-out;
-      transition: all 0.1s ease-in-out; }
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
 
 #article-page #title hgroup {
   float: none;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-bottom: 1em; }
   #article-page #title hgroup h1 {
     margin-bottom: 0.375em;
     color: #fff; }
   #article-page #title hgroup h2 {
+    margin-bottom: 0.75em;
     color: #fff; }
   #article-page #title hgroup .byline {
-    color: #f27b33; }
+    color: #ccc; }
     #article-page #title hgroup .byline em {
       margin-right: 0.375em; }
 #article-page .content article {
@@ -399,6 +403,11 @@ footer#global {
   background-image: url("../img/divider.png");
   background-position: left bottom;
   background-repeat: repeat-x; }
+
+.rss {
+  background-image: url("../img/icon-rss.png");
+  background-repeat: no-repeat;
+  background-position: left center; }
 
 @media screen and (min-width: 30em ) {
   body {

@@ -13,6 +13,7 @@
 // 1.Navigation
 // 2.Layouts
 // 3.Extensible Classes
+// 4.Sprites, Icons
 
 //////////////////////////////////////////////////////////////////
 
@@ -135,6 +136,10 @@ body {
 
     a {
         padding: $base $base/2;
+
+        &.rss {
+            padding-left: 16px;
+        }
     }
 
     #logo {
@@ -150,7 +155,7 @@ body {
     }
 
     nav {
-        @extend .calluna-regular;
+        @extend .serif-italic;
         float: right;
 
         li { display: inline }
@@ -222,13 +227,13 @@ body {
 
     h2 {
         @extend .calluna-italic;
-        color: #fff; 
-        @include transition( all, 0.1s );
+        color: #fff;
+        @include transition( all, 0.2s );
     }
 
     h4 {
         display: none;
-        @include transition( all, 0.1s );
+        @include transition( all, 0.2s );
     }
 
     aside {
@@ -236,7 +241,7 @@ body {
 
         time {
             color: #444;
-            @include transition( all, 0.1s );
+            @include transition( all, 0.2s );
         }
     }
 }
@@ -249,6 +254,7 @@ body {
             @extend .grid-15;
             float: none;
             margin: 0 auto;
+            margin-bottom: 1em;
 
             h1 {
                 margin-bottom: $base/4;
@@ -256,12 +262,13 @@ body {
             }
 
             h2 {
+                margin-bottom: $base/2;
                 color: #fff;
             }
 
             .byline {
                 @extend .small;
-                color: $orange;
+                color: #ccc;
 
                 em {
                     margin-right: $base/4;
@@ -325,6 +332,7 @@ body {
                     padding: $base 0;
                     @extend .big;
                     text-align: center;
+                    @extend .calluna-italic;
 
                     li {
                         display: inline;
@@ -437,6 +445,18 @@ footer#global {
     background-image: url('../img/divider.png');
     background-position: left bottom;
     background-repeat: repeat-x;
+}
+
+///////////////////////////////////////
+
+// 4.`Sprites, Icons
+
+///////////////////////////////////////
+
+.rss {
+    background-image: url('../img/icon-rss.png');
+    background-repeat: no-repeat;
+    background-position: left center;
 }
 
 @import "partials/media";
