@@ -15,6 +15,8 @@
 class Author < ActiveRecord::Base
   has_many :posts
 
+  validates_presence_of :twitter, :name, :bio
+
   before_validation :fetch_twitter_avatar, :if => :twitter_changed?
 
   default_scope order('name ASC')

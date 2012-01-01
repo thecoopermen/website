@@ -16,6 +16,7 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'ruby_gntp'
   gem 'spork',        '> 0.9.0.rc'

@@ -17,6 +17,9 @@ require 'spec_helper'
 describe Author do
 
   it { Author.should respond_to(:non_guest) }
+  it { should validate_presence_of(:name) }
+  it { should validate_presence_of(:twitter) }
+  it { should validate_presence_of(:bio) }
 
   context "default scope" do
 
