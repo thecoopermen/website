@@ -1,0 +1,24 @@
+<% @body_id = "article-page" %>
+
+<div id="title">
+  <div class="wrapper">
+    <hgroup>
+      <h1><%= @post.title %></h1>
+      <h2><em><%= @post.subtitle %></em></h2>
+      <h4 class="byline"><em>by <%= @post.author.name %></em></h4>
+    </hgroup>
+  </div>
+</div>
+
+<div class="content">
+  <div class="wrapper">
+    <article>
+      <aside>
+        <%= content_tag :time, datetime: @post.published_at.to_date do %>
+          Posted on: <%= @post.published_at.to_s(:post) %>
+        <% end %>
+      </aside>
+      <%= @post.html_content %>
+    </article>
+  </div>
+</div>

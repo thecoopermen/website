@@ -25,5 +25,9 @@ describe Post do
       @post.content = "&"
       @post.html_content.should match(/&amp;/)
     end
+
+    it "should produce an HTML safe string" do
+      @post.html_content.html_safe?.should be_true
+    end
   end
 end

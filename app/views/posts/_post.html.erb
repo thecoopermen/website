@@ -1,5 +1,5 @@
 <article>
-  <a href="article.html">
+  <%= link_to post do %>
     <hgroup>
       <h2><%= post.title %></h2>
       <h4><%= post.subtitle %></h4>
@@ -9,5 +9,5 @@
         <%= post.published_at.to_s(:post) %>
       <% end %>
     </aside>
-  </a>
+  <% end %>
 </article>

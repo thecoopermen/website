@@ -4,8 +4,9 @@ gem 'rails',          '3.1.3'
 gem 'jquery-rails'
 gem 'sass-rails',     '~> 3.1.5'
 gem 'meta_search',    '>= 1.1.0.pre'
-gem 'activeadmin'
+gem 'activeadmin',    :git => 'https://github.com/gregbell/active_admin.git'
 gem 'RedCloth'
+gem 'twitter'
 
 group :assets do
   gem 'coffee-rails', '~> 3.1.1'

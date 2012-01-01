@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 
-<body>
+<%= content_tag :body, :id => @body_id do %>
 
   <div class="wrapper">
     <header id="masthead">
@@ -30,46 +30,14 @@
         <header>
           <h5 class="section-heading"><em>The</em>Authors</h5>
         </header>
-
-        <section class="author">
-          <a href="#">
-            <div class="avatar">
-              <%= image_tag "twitter-icon-jordan.gif" %>
-            </div>
-            <div class="author-info">
-              <hgroup>
-                <h4>Jordan Cooperman</h4>
-                <em>@jordancooperman</em>
-              </hgroup>
-              <p>Jordan is a front-end developer working at Vector Media Group in New York City. He is a mad about responsive grids, typography and functional JavaScript. He does not have a mustache.
-            </div>
-          </a>
-        </section>
-
-        <section class="author">
-          <a href="#">
-            <div class="avatar">
-              <%= image_tag "twitter-icon-ross.gif" %>
-            </div>
-            <div class="author-info">
-              <hgroup>
-                <h4>Ross Cooperman</h4>
-                <em>@rosscooperman</em>
-              </hgroup>
-              <p>
-                Ross is a software developer, working at East Media in New York City. He has countless character flaws.
-              </p>
-            </div>
-          </a>
-        </section>
-
+        <%= render partial: 'layouts/author', collection: Author.non_guest %>
         <footer class="copyright">
           &copy; The Coopermen 2012. Layout inspired by <a href="http://jonikorpi.com">jonikorpi.com</a>
         </footer>
-      </div><!-- /content -->
+      </div>
     </div>
   </footer>
 
-</body>
+<% end %>
 
 </html>

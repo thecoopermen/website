@@ -12,8 +12,21 @@ ActiveAdmin.register Author do
       row :name
       row('Twitter Username') { author.twitter }
       row :bio
+      row('Guest?') { author.guest ? 'Yes' : 'No' }
+      row :icon_url
       row :updated_at
       row :created_at
     end
+  end
+
+  form do |f|
+    f.inputs 'Details' do
+      f.input :name
+      f.input :twitter, :label => 'Twitter Username'
+      f.input :bio
+      f.input :guest
+      f.input :icon_url, :input_html => { :disabled => true }
+    end
+    f.buttons
   end
 end
