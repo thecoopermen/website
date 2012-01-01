@@ -14,15 +14,21 @@ end
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'factory_girl_rails'
+  gem 'ruby_gntp'
+  gem 'spork',        '> 0.9.0.rc'
   gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
-  gem 'guard'
+  gem 'guard-rails'
   gem 'guard-rspec'
+  gem 'guard-spork'
 end
 
 group :development do
   gem 'capistrano'
+  gem 'annotate'
 end
 
 group :production do
   gem 'mysql2'
+  gem 'therubyracer'
 end
