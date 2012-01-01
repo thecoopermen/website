@@ -22,6 +22,3 @@
 
 # Ignore development artifacts
 *.tmproj
-
-# Ignore sass cache files
-.sass-cache/*
