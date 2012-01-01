@@ -5,3 +5,7 @@
 require File.expand_path('../config/application', __FILE__)
 
 Website::Application.load_tasks
+
+# annotate models, tests, etc. after every migrations
+command = Gem.searcher.find('annotate')
+Dir["#{command.full_gem_path}/**/tasks/**/*.rake"].each {|ext| load ext} unless command.nil?
