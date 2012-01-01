@@ -1,5 +1,5 @@
 <section class="author">
-  <a href="#">
+  <%= link_to author.twitter_url do %>
     <div class="avatar">
       <%= icon_for(author) %>
     </div>
@@ -10,5 +10,5 @@
       </hgroup>
       <p><%= author.bio %></p>
     </div>
-  </a>
+  <% end %>
 </section>

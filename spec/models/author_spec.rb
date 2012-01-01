@@ -44,4 +44,12 @@ describe Author do
       author.twitter.should == '@foo'
     end
   end
+
+  context "#twitter_url" do
+
+    it "should generate a link to the author's twitter profile" do
+      author = create(:author, twitter: '@foo')
+      author.twitter_url.should =~ /twitter\.com\/foo/
+    end
+  end
 end

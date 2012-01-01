@@ -26,6 +26,10 @@ class Author < ActiveRecord::Base
     read_attribute(:twitter).to_s.sub(/^[^@]/, '@\0')
   end
 
+  def twitter_url
+    "http://twitter.com/" + read_attribute(:twitter).sub(/^@/, '')
+  end
+
 private
 
   def fetch_twitter_avatar
