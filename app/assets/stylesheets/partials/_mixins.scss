@@ -17,20 +17,6 @@
     }
 }
 
-/* borders made from backgrounds */
-
-@mixin dotted-y($position) {
-    background-image: url("/assets/img/site/dotted-y.png");
-    background-repeat: repeat-y;
-    background-position: $position top;
-}
-
-@mixin dotted-x( $position ) {
-    background-image: url("/assets/img/site/dotted-x.png");
-    background-repeat: repeat-x;
-    background-position: left $position;
-}
-
 /* triangles */
 
 @mixin triangle($size: 7px, $position: "bottom", $color: #999) {

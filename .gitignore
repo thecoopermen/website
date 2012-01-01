@@ -4,28 +4,21 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile ~/.gitignore_global
 
-# THIS WILL NEED TO BE ADJUSTED WHEN THE RAILS APP IS IN THE ROOT
 # Ignore bundler config
-railsapp/.bundle
+/.bundle
 
 # Ignore the default SQLite database.
-railsapp/db/*.sqlite3
+/db/*.sqlite3
 
 # Ignore all logfiles and tempfiles.
-railsapp/log/*.log
-railsapp/tmp
+/log/*.log
+/tmp
 
 # Ignore config files that should not be in source control
-railsapp/config/database.yml
+/config/database.yml
 
 # Ignore annoying filesystem artifacts
 .DS_Store
 
-
-.ftpquota
+# Ignore development artifacts
 *.tmproj
-error_log
-/.htaccess
-robots.txt
-.sass-cache/*
-*.swp

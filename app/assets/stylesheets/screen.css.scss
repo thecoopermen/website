@@ -97,7 +97,7 @@ pre {
     color: #fff;
     padding-left: 25px;
     @extend .serif-bold;
-    background-image: url('../img/gems.png');
+    background-image: url('gems.png');
     background-repeat: no-repeat;
     background-position: left center;
 
@@ -121,7 +121,7 @@ body {
 }
 
 body {
-    background-image: url('../img/bg-texture.gif');
+    background-image: url('bg-texture.gif');
     background-repeat: repeat;
     background-position: left top;
 }
@@ -196,7 +196,7 @@ body {
 }
 
 .articles {
-    padding: $base 0; 
+    padding: $base 0;
 
     article {
         @include grid( 16 );
@@ -446,7 +446,7 @@ footer#global {
 }
 
 .divider {
-    background-image: url('../img/divider.png');
+    background-image: url('divider.png');
     background-position: left bottom;
     background-repeat: repeat-x;
 }
@@ -458,7 +458,7 @@ footer#global {
 ///////////////////////////////////////
 
 .rss {
-    background-image: url('../img/icon-rss.png');
+    background-image: url('icon-rss.png');
     background-repeat: no-repeat;
     background-position: left center;
 }
