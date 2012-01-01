@@ -21,6 +21,7 @@ group :development, :test do
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-spork'
+  gem 'foreman'
 end
 
 group :development do
