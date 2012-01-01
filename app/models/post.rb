@@ -16,4 +16,8 @@ class Post < ActiveRecord::Base
   belongs_to :author
 
   validates_presence_of :author_id
+
+  def html_content
+    @html_content ||= RedCloth.new(content).to_html
+  end
 end

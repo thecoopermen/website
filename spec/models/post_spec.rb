@@ -1,7 +1,29 @@
+# == Schema Information
+#
+# Table name: posts
+#
+#  id           :integer         not null, primary key
+#  title        :string(255)
+#  subtitle     :string(255)
+#  content      :text
+#  published_at :datetime
+#  created_at   :datetime
+#  updated_at   :datetime
+#  author_id    :integer
+#
+
 require 'spec_helper'
 
 describe Post do
-  it "should be a post" do
-    "Post".should == "Post"
+  before do
+    @post = create(:post)
+  end
+
+  context "#html_content" do
+
+    it "should generate HTML content" do
+      @post.content = "&"
+      @post.html_content.should match(/&amp;/)
+    end
   end
 end

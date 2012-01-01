@@ -1,0 +1,13 @@
+<article>
+  <a href="article.html">
+    <hgroup>
+      <h2><%= post.title %></h2>
+      <h4><%= post.subtitle %></h4>
+    </hgroup>
+    <aside>
+      <%= content_tag :time, datetime: post.published_at.to_date do %>
+        <%= post.published_at.to_s(:post) %>
+      <% end %>
+    </aside>
+  </a>
+</article>
