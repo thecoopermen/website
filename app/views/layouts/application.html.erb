@@ -13,7 +13,9 @@
 
   <div class="wrapper">
     <header id="masthead">
-      <a id="logo"><em>The</em>Coopermen</a>
+      <%= link_to root_url, :id => 'logo' do %>
+        <em>The</em>Coopermen
+      <% end %>
       <nav>
         <ul>
           <li><a href="#" class="rss">rss</a></li>
