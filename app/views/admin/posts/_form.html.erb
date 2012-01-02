@@ -1,0 +1,11 @@
+<%= semantic_form_for [:admin, @post] do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :author %>
+    <%= f.input :title %>
+    <%= f.input :subtitle %>
+    <%= f.input :content %>
+    <%= f.input :permalink, :required => !f.object.new_record? %>
+    <%= f.input :published_at %>
+  <% end %>
+  <%= f.buttons %>
+<% end %>

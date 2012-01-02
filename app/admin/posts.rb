@@ -12,9 +12,12 @@ ActiveAdmin.register Post do
       row :title
       row :subtitle
       row :content
+      row :permalink
       row :published_at
       row :updated_at
       row :created_at
     end
   end
+
+  form partial: 'form'
 end
