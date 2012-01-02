@@ -20,4 +20,8 @@ class Post < ActiveRecord::Base
   def html_content
     @html_content ||= RedCloth.new(content).to_html.html_safe
   end
+
+  def to_param
+    "#{id}-#{title.parameterize}"
+  end
 end

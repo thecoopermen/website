@@ -30,4 +30,12 @@ describe Post do
       @post.html_content.html_safe?.should be_true
     end
   end
+
+  context "#to_param" do
+
+    it "should include parameterized version of the post title" do
+      @post.update_attributes(title: 'Foo Bar')
+      @post.to_param.should =~ /foo-bar/
+    end
+  end
 end
