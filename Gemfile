@@ -27,7 +27,7 @@ group :development, :test do
 end
 
 group :darwin do
-  gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+  gem 'rb-fsevent', :require => false
 end
 
 group :development do
