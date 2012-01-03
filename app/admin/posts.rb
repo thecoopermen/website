@@ -8,7 +8,7 @@ ActiveAdmin.register Post do
 
   show :title => :title do
     attributes_table do
-      row('Author') { link_to post.author.name, [ :admin, post.author ] }
+      row('Author') { link_to post.author.name, admin_author_path(post.author) }
       row :title
       row :subtitle
       row :content

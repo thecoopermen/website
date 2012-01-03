@@ -17,23 +17,23 @@
       message: OK
     headers:
       date:
-      - Mon, 02 Jan 2012 22:46:36 GMT
+      - Tue, 03 Jan 2012 06:02:47 GMT
       status:
       - 200 OK
       x-ratelimit-limit:
       - '150'
       x-transaction:
-      - 494d84ca2d7e69dc
+      - 5388a9cec13b0dfa
       etag:
-      - ! '"abeed4ecf7269ea691896b51c9606a49"'
+      - ! '"abeed4ecf7269ea691896b51c9606a49"-gzip'
       x-frame-options:
       - SAMEORIGIN
       last-modified:
-      - Mon, 02 Jan 2012 22:46:36 GMT
+      - Tue, 03 Jan 2012 06:02:47 GMT
       x-ratelimit-remaining:
-      - '146'
+      - '142'
       x-runtime:
-      - '0.01174'
+      - '0.00965'
       x-transaction-mask:
       - a6183ffa5f8ca943ff1b53b5644ef114e5cfb12b
       content-type:
@@ -49,15 +49,15 @@
       cache-control:
       - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
       x-ratelimit-reset:
-      - '1325547993'
+      - '1325571311'
       x-mid:
-      - fe65476facab3b8c7785618c71063ed4b75571d5
+      - 1026cd1a55515fba0a19b4b071b61cdc42c67d90
       set-cookie:
-      - k=10.35.42.138.1325544396037917; path=/; expires=Mon, 09-Jan-12 22:46:36 GMT;
-        domain=.twitter.com
-      - guest_id=v1%3A132554439604113348; domain=.twitter.com; path=/; expires=Thu,
-        02-Jan-2014 10:46:36 GMT
-      - _twitter_sess=BAh7CDoPY3JlYXRlZF9hdGwrCApVmqA0AToHaWQiJWQ5NWQxNTA2YmZlMzdm%250AZDA3ZjQ5MTdiNWViNDEyMGMzIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%250AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--16600be1c2d1fa0a96dcc524eee7cca3bdbcff5c;
+      - k=10.34.231.112.1325570567944744; path=/; expires=Tue, 10-Jan-12 06:02:47
+        GMT; domain=.twitter.com
+      - guest_id=v1%3A132557056794852465; domain=.twitter.com; path=/; expires=Thu,
+        02-Jan-2014 18:02:47 GMT
+      - _twitter_sess=BAh7CDoPY3JlYXRlZF9hdGwrCA6vKaI0AToHaWQiJTk2NjRlODkxMGZlNTUx%250AYzUxOTA4ZmJlZDVlYmE5MTkyIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%250AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--5772bd36fadefdcc7c8fff645fd7acfca631f078;
         domain=.twitter.com; path=/; HttpOnly
       vary:
       - Accept-Encoding

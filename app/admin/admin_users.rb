@@ -1,4 +1,4 @@
-ActiveAdmin.register Author do
+ActiveAdmin.register AdminUser, :as => 'Author' do
   index do
     column :name
     column 'Twitter Username', :twitter
@@ -22,6 +22,9 @@ ActiveAdmin.register Author do
   form do |f|
     f.inputs 'Details' do
       f.input :name
+      f.input :email
+      f.input :password
+      f.input :password_confirmation
       f.input :twitter, :label => 'Twitter Username'
       f.input :bio
       f.input :guest

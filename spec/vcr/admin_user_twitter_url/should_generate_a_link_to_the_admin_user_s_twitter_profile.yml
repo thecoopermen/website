@@ -17,23 +17,23 @@
       message: OK
     headers:
       date:
-      - Mon, 02 Jan 2012 22:46:35 GMT
+      - Tue, 03 Jan 2012 06:02:48 GMT
       status:
       - 200 OK
       x-ratelimit-limit:
       - '150'
       x-transaction:
-      - ca301d1f1f06ca02
+      - 8ba39aa0b14e3d49
       etag:
       - ! '"abeed4ecf7269ea691896b51c9606a49"'
       x-frame-options:
       - SAMEORIGIN
       last-modified:
-      - Mon, 02 Jan 2012 22:46:35 GMT
+      - Tue, 03 Jan 2012 06:02:48 GMT
       x-ratelimit-remaining:
-      - '147'
+      - '141'
       x-runtime:
-      - '0.03460'
+      - '0.01208'
       x-transaction-mask:
       - a6183ffa5f8ca943ff1b53b5644ef114e5cfb12b
       content-type:
@@ -49,15 +49,15 @@
       cache-control:
       - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
       x-ratelimit-reset:
-      - '1325547993'
+      - '1325571311'
       x-mid:
-      - 905b828231689b0affe23f31e088ebca033b3b04
+      - 2ea841a50711f9cc6cd1da38a9cd25f2b58e2615
       set-cookie:
-      - k=10.34.126.123.1325544395179287; path=/; expires=Mon, 09-Jan-12 22:46:35
+      - k=10.34.231.112.1325570568747678; path=/; expires=Tue, 10-Jan-12 06:02:48
         GMT; domain=.twitter.com
-      - guest_id=v1%3A132554439518444965; domain=.twitter.com; path=/; expires=Thu,
-        02-Jan-2014 10:46:35 GMT
-      - _twitter_sess=BAh7CDoPY3JlYXRlZF9hdGwrCLJRmqA0AToHaWQiJWNiODFhODUwMGY2OWI0%250AODI1NDM1MTJlY2Y5MTJjY2M3IgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%250AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--eb0f5e1616e39ff897948f2d184260d409da9e4b;
+      - guest_id=v1%3A132557056875233074; domain=.twitter.com; path=/; expires=Thu,
+        02-Jan-2014 18:02:48 GMT
+      - _twitter_sess=BAh7CDoPY3JlYXRlZF9hdGwrCDGyKaI0AToHaWQiJWE5ZjZjMWMwNjQxNjgy%250AOTQzYzM4ODlhNjY3ZjQ2ODEwIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%250AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--03a1f08c46e42c826463d50bdb42fa66c83bc257;
         domain=.twitter.com; path=/; HttpOnly
       vary:
       - Accept-Encoding

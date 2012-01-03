@@ -15,14 +15,43 @@
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
+#  name                   :string(255)
+#  twitter                :string(255)
+#  bio                    :text
+#  guest                  :boolean         default(FALSE)
+#  icon_url               :string(255)
 #
 
 class AdminUser < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, 
+  devise :database_authenticatable,
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :twitter, :bio, :guest, :icon_url
+
+  validates_presence_of :twitter, :name, :bio
+
+  before_validation :fetch_twitter_avatar, :if => :twitter_changed?
+
+  default_scope order('name ASC')
+  scope :non_guest, where(:guest => false)
+
+  def twitter
+    read_attribute(:twitter).to_s.sub(/^[^@]/, '@\0')
+  end
+
+  def twitter_url
+    "http://twitter.com/" + read_attribute(:twitter).sub(/^@/, '')
+  end
+
+private
+
+  def fetch_twitter_avatar
+    unless twitter.blank?
+      icon_url = Twitter.user(twitter.sub(/^@/, '').strip).profile_image_url
+      write_attribute(:icon_url, icon_url)
+    end
+  end
 end

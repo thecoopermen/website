@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120102173351) do
+ActiveRecord::Schema.define(:version => 20120103061350) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(:version => 20120102173351) do
   add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
 
   create_table "admin_users", :force => true do |t|
-    t.string   "email",                                 :default => "", :null => false
-    t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
+    t.string   "email",                                 :default => "",    :null => false
+    t.string   "encrypted_password",     :limit => 128, :default => "",    :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -41,20 +41,15 @@ ActiveRecord::Schema.define(:version => 20120102173351) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.string   "twitter"
+    t.text     "bio"
+    t.boolean  "guest",                                 :default => false
+    t.string   "icon_url"
   end
 
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
-
-  create_table "authors", :force => true do |t|
-    t.string   "name"
-    t.string   "twitter"
-    t.text     "bio"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.boolean  "guest",      :default => false
-    t.string   "icon_url"
-  end
 
   create_table "posts", :force => true do |t|
     t.string   "title"

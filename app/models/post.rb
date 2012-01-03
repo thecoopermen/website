@@ -14,7 +14,7 @@
 #
 
 class Post < ActiveRecord::Base
-  belongs_to :author
+  belongs_to :author, :class_name => 'AdminUser'
 
   before_validation :generate_permalink,   :if => :new_record?
   after_initialize  :default_published_at, :if => :new_record?

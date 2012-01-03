@@ -17,23 +17,23 @@
       message: OK
     headers:
       date:
-      - Mon, 02 Jan 2012 22:46:36 GMT
+      - Tue, 03 Jan 2012 06:02:46 GMT
       status:
       - 200 OK
       x-ratelimit-limit:
       - '150'
       x-transaction:
-      - 5e8015742928d2e6
+      - 7ac4bb3a65f83362
       etag:
       - ! '"abeed4ecf7269ea691896b51c9606a49"'
       x-frame-options:
       - SAMEORIGIN
       last-modified:
-      - Mon, 02 Jan 2012 22:46:36 GMT
+      - Tue, 03 Jan 2012 06:02:46 GMT
       x-ratelimit-remaining:
-      - '145'
+      - '143'
       x-runtime:
-      - '0.01241'
+      - '0.03214'
       x-transaction-mask:
       - a6183ffa5f8ca943ff1b53b5644ef114e5cfb12b
       content-type:
@@ -49,15 +49,15 @@
       cache-control:
       - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
       x-ratelimit-reset:
-      - '1325547993'
+      - '1325571311'
       x-mid:
-      - bd7e03c9e728017896c484a3dc6e397cc1139809
+      - 9fcc78440fad35f3cd938c179b4e4dccbd68eb71
       set-cookie:
-      - k=10.34.255.123.1325544396890031; path=/; expires=Mon, 09-Jan-12 22:46:36
-        GMT; domain=.twitter.com
-      - guest_id=v1%3A132554439689592231; domain=.twitter.com; path=/; expires=Thu,
-        02-Jan-2014 10:46:36 GMT
-      - _twitter_sess=BAh7CDoPY3JlYXRlZF9hdGwrCGFYmqA0AToHaWQiJWNjNzllM2U4NmI4YmJi%250AZDYzMWM4MTIyZGQ5MzU3ZGUzIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%250AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--93689df2192de9d35e65b529949ca4d3255c2452;
+      - k=10.35.47.123.1325570566951971; path=/; expires=Tue, 10-Jan-12 06:02:46 GMT;
+        domain=.twitter.com
+      - guest_id=v1%3A132557056695783682; domain=.twitter.com; path=/; expires=Thu,
+        02-Jan-2014 18:02:46 GMT
+      - _twitter_sess=BAh7CDoPY3JlYXRlZF9hdGwrCC6rKaI0AToHaWQiJWJhNmQ2ZGEyYmEzOGMz%250ANTQ5NWI4MTcxMjc0MDA0N2NiIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%250AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--228f076b08955b6bcd260b9d9b406332aa7f3480;
         domain=.twitter.com; path=/; HttpOnly
       vary:
       - Accept-Encoding
