@@ -14,7 +14,7 @@
 
 require 'spec_helper'
 
-describe Author do
+describe Author, :vcr do
 
   it { Author.should respond_to(:non_guest) }
   it { should validate_presence_of(:name) }

@@ -7,6 +7,7 @@ gem 'meta_search',    '>= 1.1.0.pre'
 gem 'activeadmin',    :git => 'https://github.com/gregbell/active_admin.git'
 gem 'RedCloth'
 gem 'twitter'
+gem 'chronic'
 
 group :assets do
   gem 'coffee-rails', '~> 3.1.1'
@@ -33,6 +34,11 @@ end
 group :development do
   gem 'capistrano'
   gem 'annotate'
+end
+
+group :test do
+  gem 'vcr'
+  gem 'fakeweb'
 end
 
 group :production do

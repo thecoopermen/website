@@ -9,7 +9,7 @@ FactoryGirl.define do
 
   factory :author do
     sequence(:name) { |n| "An author named #{n}" }
-    twitter         "@someone"
+    twitter         "@mcdonalds"
     bio             "Some Bio"
   end
 end

@@ -15,13 +15,25 @@
 
 require 'spec_helper'
 
-describe Post do
+describe Post, :vcr do
   before do
     @post = create(:post)
   end
 
   it { should validate_presence_of(:permalink) }
   it { should validate_presence_of(:title) }
+
+  context "instantiating a new post" do
+    before do
+      @post = Post.new
+    end
+
+    it "should initialize the publish date to the current date/time" do
+      # hard to assert but running this spec should never take more than 5 seconds
+      @post.published_at.to_i.should > Time.now.to_i - 5
+      @post.published_at.to_i.should < Time.now.to_i + 5
+    end
+  end
 
   context "#html_content" do
 
@@ -47,6 +59,53 @@ describe Post do
     it "should not change when the title of the post changes" do
       @post.update_attributes(title: 'Bar Foo')
       @post.to_param.should =~ /foo-bar/
+    end
+  end
+
+  context "#published_date" do
+    it "should return a date object" do
+      @post.published_date.should be_an_instance_of(Date)
+    end
+
+    it "should default to today" do
+      @post.published_date.should == Time.now.to_date
+    end
+
+    it "should reflect the date portion of the published_at field" do
+      @post = create(:post, published_at: 2.days.ago)
+      @post.published_date.should == 2.days.ago.to_date
+    end
+  end
+
+  context "#published_time" do
+    it "should return a time object" do
+      @post.published_time.should be_an_instance_of(Time)
+    end
+
+    it "should default to the current time" do
+      @post.published_time.to_i.should > Time.now.to_i - 5
+      @post.published_time.to_i.should < Time.now.to_i + 5
+    end
+
+    it "should reflect the time portion of the published_at field" do
+      @post = create(:post, published_at: 2.days.ago)
+      @post.published_time.to_s.should == 2.days.ago.to_s
+    end
+  end
+
+  context "#published_date and #published_time setters" do
+    before do
+      @post = create(:post, published_at: Time.zone.parse("1984-01-22 08:15:00"))
+    end
+
+    it "#published_date= should update the date but not the time" do
+      @post.published_date = "1/1/1999"
+      @post.published_at.to_s.should =~ /^1999-01-01 08:15:00/
+    end
+
+    it "#published_time= should update the time but not the date" do
+      @post.published_time = '3:00pm'
+      @post.published_at.to_s.should =~ /1984-01-22 15:00:00/
     end
   end
 end

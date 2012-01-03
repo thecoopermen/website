@@ -1,2 +1,4 @@
 //= require active_admin/base
-//= require admin/post
+//= require jquery-ui
+//= require admin/permalink
+//= require admin/datetime
