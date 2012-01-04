@@ -30,7 +30,5 @@ end
 
 after 'deploy:finalize_update' do
   # make symlinks to server-specific config files
-  [ "database.yml" ].each do |file|
-    run "ln -s #{shared_path}/config/#{file} #{release_path}/config/#{file}"
-  end
+  run "ln -s #{shared_path}/config/*.yml #{release_path}/config/"
 end

@@ -16,6 +16,7 @@
 
 # Ignore config files that should not be in source control
 /config/database.yml
+/config/exceptional.yml
 
 # Ignore annoying filesystem artifacts
 .DS_Store
