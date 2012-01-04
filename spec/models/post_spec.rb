@@ -107,5 +107,10 @@ describe Post, :vcr do
       @post.published_time = '3:00pm'
       @post.published_at.to_s.should =~ /1984-01-22 15:00:00/
     end
+
+    it "should work properly from an initializer" do
+      @post = Post.new(published_date: '1/1/1999', published_time: '12:30pm')
+      @post.published_at.to_s.should =~ /1999-01-01 12:30:00/
+    end
   end
 end

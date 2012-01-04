@@ -48,6 +48,10 @@ class Post < ActiveRecord::Base
     write_attribute(:published_at, published_at.midnight + time_secs)
   end
 
+  def published_at
+    read_attribute(:published_at) || Time.now
+  end
+
 private
 
   def generate_permalink

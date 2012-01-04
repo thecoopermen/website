@@ -1,0 +1,95 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.twitter.com:443/1/users/show.json?screen_name=mcdonalds
+    body: 
+    headers:
+      accept:
+      - application/json
+      user-agent:
+      - Twitter Ruby Gem 2.0.2
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Wed, 04 Jan 2012 03:56:04 GMT
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '150'
+      x-transaction:
+      - 58b0f4c5c3d659b7
+      etag:
+      - ! '"652e86dfa921913ceb613651336c9179"-gzip'
+      x-frame-options:
+      - SAMEORIGIN
+      last-modified:
+      - Wed, 04 Jan 2012 03:56:04 GMT
+      x-ratelimit-remaining:
+      - '149'
+      x-runtime:
+      - '0.01325'
+      x-transaction-mask:
+      - a6183ffa5f8ca943ff1b53b5644ef1145999b2be
+      content-type:
+      - application/json; charset=utf-8
+      pragma:
+      - no-cache
+      x-ratelimit-class:
+      - api
+      x-revision:
+      - DEV
+      expires:
+      - Tue, 31 Mar 1981 05:00:00 GMT
+      cache-control:
+      - no-cache, no-store, must-revalidate, pre-check=0, post-check=0
+      x-ratelimit-reset:
+      - '1325652964'
+      x-mid:
+      - ee1b56ac81ff8dc56901ede3fc362ed145ea4386
+      set-cookie:
+      - k=10.34.253.111.1325649364938968; path=/; expires=Wed, 11-Jan-12 03:56:04
+        GMT; domain=.twitter.com
+      - guest_id=v1%3A132564936494349795; domain=.twitter.com; path=/; expires=Fri,
+        03-Jan-2014 15:56:04 GMT
+      - _twitter_sess=BAh7CDoPY3JlYXRlZF9hdGwrCNEH3KY0AToHaWQiJTFjM2M0Y2I3Y2M3MjE0%250AYzJjMWNkYWU4OTIxMWJiZTRmIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%250AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--42e7b667d8f19dc580e2262bebb0dd91466478a0;
+        domain=.twitter.com; path=/; HttpOnly
+      vary:
+      - Accept-Encoding
+      content-encoding:
+      - gzip
+      content-length:
+      - '1049'
+      server:
+      - tfe
+    body: !binary |-
+      H4sIAAAAAAAAA6VV227jNhD9Fa4K9IJmbepiWRLQh62TLbrAYoFNgrwIIGhp
+      ZLOhSJek4raL/fcdSpZ8SRAUWL8kFMmZM+fMHH4JGi2l3jMDf3dgHbOgXFCo
+      TsqrQHK1CYoAVHAVbEAzUHwtoQ6KhksLV4HSTjSi4k5oZcdLO6MbIYGtefW4
+      MbpTNau01AYDrej1zc110J9xULmTUFIPYfBU2VFaV3cFScJZRqM8za/eZtks
+      zGhOw+DFBA7XQeFMB8dt0fINsM5ItnVuh/CC/m9Rzsu5FXTm9qLdzCrdlvOz
+      K7acJ0mWZTTJluUcTzkH5s9KK6a0abmc/bXbIArFW0wZfKyuteKy/smeIVMK
+      jM/9Wta14Qh9OItJx0j4bxhHizRc0Dwp51I8AYa2W9SIS8mEkkIBa6EWfCxZ
+      CotcIs2d1y6hUXjEYkUNa24YLuQkxDXq8D7FsEeIPcL9fj/ja925tqoHMANU
+      XJZzBXtrdL8EcMxtgbk9wM6y6TQ70MUc8Ha2da30OVzFdNNYQGxvozCl9Cqo
+      wVZG7A6KP4DENECcJhiVfGqwqQSXZKSk7CIa5pbc374jd0MGskOp3pAHGPYM
+      kC2YPkJPhiLILZHAjSKN0S1B6ohuiO4Mabiy/fbQ+Uj+jKy2UD3irusBIMOP
+      PpSvs7/Sl0OwFidaYP9p5aVf4aQYRHmH38jP97fkR7Liitf8l+A5/WttauTl
+      2SSImlnnvyxDGqVhFOE37DVnxLpz2tjjzA1SD5iFn8th3KzjrsPu/oLXMIdQ
+      3ME0iw1/0kacztlO8grGbQypcOxOtg14Sd3YSqiUUGgNO/kvc5qhZgA4B33r
+      DyHOtnsobCzpYAfaWrHGA2gsVjjfzRfJTtKfRuss8nUeayIrXCQxOgPNojSl
+      iziNo8GhxoOI05fFONYQ3HVAPnBFaEwiWiTLIk7IrxR/uAwv+Z5oRdk9Ub0b
+      xStOtgaa38rzUTEch1Cl/YwExIDEA0oPEpXDzZujQWD7DsHKOR/2ev2D4nk1
+      LzLxKuWTpPCPr3ml1cZwZ0nUN/QddlEldGdJGBHsHu84b8gfGrenghyWUc4/
+      vXvP3QesNyJP6NEk8fex939opO+lNXdOAlmRz50Ee3n5Pv2o4ybZBF/9hDe8
+      k46deeuxDQ9fsbRTHz8cGlr9TMQHqMkt7AiNSLgskrRI4klEmiORjRGg0IEO
+      nZvnNBqnBYsdP0d0GabRC4/EqQvy+Hsfh/GOV2Oa+bj/ec3RJ9H7reTOb1xQ
+      cknHM3QvPl2XtxBonCd0EWXLvJw/bDXKhRbLDvbJbh+FOoC9UGoC9AQGX/ej
+      9bwG8P+/sd8B1LtZ5+1skjM5ovKePVFNaZb8nvhn89SxpsfaHgZv9NzRRY+B
+      cRDzr98ANYRXwxwJAAA=
+    http_version: '1.1'
