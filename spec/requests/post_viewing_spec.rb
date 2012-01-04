@@ -4,14 +4,19 @@ describe "viewing posts publicly", :vcr do
 
   it "should display posts that are published" do
     create(:post, title: "A Testable Title", published: true)
-    get "/"
-    response.body.should include("A Testable Title")
+    visit root_url
+    page.should have_content("A Testable Title")
   end
 
-  it "should not display posts that are not published" do
+  it "should not index posts that are not published" do
     create(:post, title: "A Testable Title", published: false)
-    get "/"
-    response.body.should_not include("A Testable Title")
+    visit root_url
+    page.should_not have_content("A Testable Title")
+  end
+
+  it "should not show posts that are not published" do
+    post = create(:post, title: "A Testable Title", published: false)
+    lambda { visit post_url(post) }.should raise_error(ActiveRecord::RecordNotFound)
   end
 
   it "should order posts by publication date" do

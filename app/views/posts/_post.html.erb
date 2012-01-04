@@ -1,5 +1,7 @@
+<% path = (@path_helper) ? send(@path_helper, post) : post %>
+
 <article>
-  <%= link_to post do %>
+  <%= link_to path do %>
     <hgroup>
       <h2><%= post.title %></h2>
       <h4><%= post.subtitle %></h4>

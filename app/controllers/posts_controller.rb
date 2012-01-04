@@ -5,6 +5,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.where(:published => true).find(params[:id])
   end
 end

@@ -40,6 +40,8 @@ end
 group :test do
   gem 'vcr'
   gem 'fakeweb'
+  gem 'capybara'
+  gem 'database_cleaner'
 end
 
 group :production do
