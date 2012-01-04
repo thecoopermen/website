@@ -11,6 +11,7 @@
 #  updated_at   :datetime
 #  author_id    :integer
 #  permalink    :string(255)
+#  published    :boolean         default(FALSE)
 #
 
 require 'spec_helper'

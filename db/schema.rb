@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120103061350) do
+ActiveRecord::Schema.define(:version => 20120104044426) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(:version => 20120103061350) do
     t.datetime "updated_at"
     t.integer  "author_id"
     t.string   "permalink"
+    t.boolean  "published",    :default => false
   end
 
 end
