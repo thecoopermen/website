@@ -1,6 +1,7 @@
 module AuthorHelper
 
   def icon_for(author)
-    image_tag author.icon_url unless author.icon_url.blank?
+    url = (request.protocol.match(/^https/i)) ? author.icon_url_ssl : author.icon_url
+    image_tag url unless url.blank?
   end
 end
