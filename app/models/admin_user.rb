@@ -32,7 +32,7 @@ class AdminUser < ActiveRecord::Base
 
   validates_presence_of :twitter, :name, :bio
 
-  before_validation :fetch_twitter_avatar, :if => :twitter_changed?
+  before_validation :fetch_twitter_avatar
 
   default_scope order('name ASC')
   scope :non_guest, where(:guest => false)
@@ -54,7 +54,7 @@ protected
 private
 
   def fetch_twitter_avatar
-    unless twitter.blank?
+    if read_attribute(:twitter) && twitter_changed?
       icon_url     = Twitter.user(twitter.sub(/^@/, '').strip).profile_image_url
       icon_url_ssl = Twitter.user(twitter.sub(/^@/, '').strip).profile_image_url_https
       write_attribute(:icon_url,     icon_url)
