@@ -20,6 +20,7 @@
 #  bio                    :text
 #  guest                  :boolean         default(FALSE)
 #  icon_url               :string(255)
+#  icon_url_ssl           :string(255)
 #
 
 require 'spec_helper'
@@ -39,6 +40,17 @@ describe AdminUser, :vcr do
       admin_users = AdminUser.all
       admin_users.first.name.should == 'A'
       admin_users.last.name.should == 'Z'
+    end
+  end
+
+  context "creation" do
+
+    it "should fill in the regular HTTP version of icon_url" do
+      create(:admin_user, twitter: 'mcdonalds').icon_url.should =~ /^http/
+    end
+
+    it "should fill in the HTTPS version of icon_url" do
+      create(:admin_user, twitter: 'mcdonalds').icon_url_ssl.should =~ /^https/
     end
   end
 

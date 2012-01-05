@@ -20,6 +20,7 @@
 #  bio                    :text
 #  guest                  :boolean         default(FALSE)
 #  icon_url               :string(255)
+#  icon_url_ssl           :string(255)
 #
 
 class AdminUser < ActiveRecord::Base
@@ -50,8 +51,10 @@ private
 
   def fetch_twitter_avatar
     unless twitter.blank?
-      icon_url = Twitter.user(twitter.sub(/^@/, '').strip).profile_image_url
-      write_attribute(:icon_url, icon_url)
+      icon_url     = Twitter.user(twitter.sub(/^@/, '').strip).profile_image_url
+      icon_url_ssl = Twitter.user(twitter.sub(/^@/, '').strip).profile_image_url_https
+      write_attribute(:icon_url,     icon_url)
+      write_attribute(:icon_url_ssl, icon_url_ssl)
     end
   end
 end

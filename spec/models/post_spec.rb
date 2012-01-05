@@ -89,8 +89,9 @@ describe Post, :vcr do
     end
 
     it "should reflect the time portion of the published_at field" do
-      @post = create(:post, published_at: 2.days.ago)
-      @post.published_time.to_s.should == 2.days.ago.to_s
+      time  = 2.days.ago
+      @post = create(:post, published_at: time)
+      @post.published_time.to_s.should == time.to_s
     end
   end
 
