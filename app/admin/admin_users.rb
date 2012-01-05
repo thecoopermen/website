@@ -14,6 +14,7 @@ ActiveAdmin.register AdminUser, :as => 'Author' do
       row :bio
       row('Guest?') { author.guest ? 'Yes' : 'No' }
       row :icon_url
+      row :icon_url_ssl
       row :updated_at
       row :created_at
     end
@@ -28,7 +29,8 @@ ActiveAdmin.register AdminUser, :as => 'Author' do
       f.input :twitter, :label => 'Twitter Username'
       f.input :bio
       f.input :guest
-      f.input :icon_url, :input_html => { :disabled => true }
+      f.input :icon_url,     :input_html => { :disabled => true }
+      f.input :icon_url_ssl, :input_html => { :disabled => true }
     end
     f.buttons
   end
