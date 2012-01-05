@@ -5,10 +5,10 @@ gem 'jquery-rails'
 gem 'sass-rails',     '~> 3.1.5'
 gem 'meta_search',    '>= 1.1.0.pre'
 gem 'activeadmin',    :git => 'https://github.com/gregbell/active_admin.git'
-gem 'RedCloth'
-gem 'coderay',        :require => [ 'coderay', 'coderay/for_redcloth' ]
+gem 'redcarpet'
 gem 'twitter'
 gem 'chronic'
+gem 'pygments.rb'
 
 group :assets do
   gem 'coffee-rails', '~> 3.1.1'

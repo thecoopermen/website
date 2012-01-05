@@ -23,7 +23,14 @@ class Post < ActiveRecord::Base
   validates_presence_of :author_id, :permalink, :title
 
   def html_content
-    @html_content ||= RedCloth.new(content).to_html.html_safe
+    return @html_content if @html_content
+
+    parser = Redcarpet::Markdown.new(MarkdownRenderer.new({ :filter_html => true }), {
+      :autolink            => true,
+      :space_after_headers => true,
+      :fenced_code_blocks  => true
+    })
+    @html_content = parser.render(content).html_safe
   end
 
   def to_param

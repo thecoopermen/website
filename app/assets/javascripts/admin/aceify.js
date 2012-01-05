@@ -14,6 +14,7 @@ if ($('#ace_editor').size() > 0) {
   // set the editor's properties
   editor.getSession().setTabSize(2);
   editor.getSession().setUseSoftTabs(true);
+  // editor.getSession().setUseWrapMode(true);
   editor.setShowPrintMargin(false);
 
   // make sure the backing form element gets updated when its form submits
