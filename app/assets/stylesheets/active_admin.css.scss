@@ -5,3 +5,18 @@
 #post_published_date, #post_published_time {
   width: 10em;
 }
+
+#ace_editor {
+  border: 1px solid #C9D0D6;
+  border-radius: 3px 3px 3px 3px;
+
+  position: relative;
+  height: 50em;
+  width: 78%;
+  overflow: hidden;
+  z-index: 10;
+}
+
+form fieldset > ol > li.boolean label {
+  width: auto;
+}

@@ -1,5 +1,5 @@
 $(function() {
 
-$('#post_published_date').datepicker();
+// $('#post_published_date').datepicker();
 
 });

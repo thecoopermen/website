@@ -10,7 +10,11 @@
     <%= f.input :title %>
     <%= f.input :subtitle %>
     <%= f.input :permalink, :required => !f.object.new_record? %>
-    <%= f.input :content %>
+    <%= f.input :content, :as => :hidden %>
+    <li class="text input optional">
+      <%= f.label :content %>
+      <div id="ace_editor"></div>
+    </li>
   <% end %>
   <%= f.buttons %>
 <% end %>
