@@ -1,4 +1,8 @@
 class DeviseCreateAdminUsers < ActiveRecord::Migration
+  class AdminUser < ActiveRecord::Base
+    devise :database_authenticatable
+  end
+
   def change
     create_table(:admin_users) do |t|
       t.database_authenticatable :null => false
