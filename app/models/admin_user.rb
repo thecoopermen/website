@@ -42,7 +42,7 @@ class AdminUser < ActiveRecord::Base
   end
 
   def twitter_url
-    "http://twitter.com/" + read_attribute(:twitter).sub(/^@/, '')
+    "http://twitter.com/" + read_attribute(:twitter).to_s.sub(/^@/, '')
   end
 
 protected
