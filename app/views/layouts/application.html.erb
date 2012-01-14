@@ -5,6 +5,7 @@
   <title>The Coopermen - Writing</title>
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <%= tag :link, rel: 'alternate', type: 'application/rss+xml', title: 'RSS', href: posts_path(format: 'rss') %>
   <%= stylesheet_link_tag 'application' %>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
@@ -18,7 +19,7 @@
       <% end %>
       <nav>
         <ul>
-          <li><a href="#" class="rss">rss</a></li>
+          <li><%= link_to 'rss', posts_path(format: 'rss'), :class => 'rss' %></li>
         </ul>
       </nav>
     </header>
