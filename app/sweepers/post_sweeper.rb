@@ -14,5 +14,6 @@ class PostSweeper < ActionController::Caching::Sweeper
     expire_page "/index"
     expire_page Rails.application.routes.url_helpers.url_for(post_index)
     expire_page Rails.application.routes.url_helpers.url_for(post_show)
+    expire_page Rails.application.routes.url_helpers.url_for(post_rss)
   end
 end
