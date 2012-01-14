@@ -1,18 +1,18 @@
 source 'http://rubygems.org'
 
-gem 'rails',          '3.1.3'
+gem 'rails',               '3.1.3'
 gem 'jquery-rails'
-gem 'sass-rails',     '~> 3.1.5'
-gem 'meta_search',    '>= 1.1.0.pre'
-gem 'activeadmin',    :git => 'https://github.com/gregbell/active_admin.git'
+gem 'sass-rails',          '~> 3.1.5'
+gem 'meta_search',         '>= 1.1.0.pre'
+gem 'activeadmin',         :git => 'https://github.com/gregbell/active_admin.git'
 gem 'redcarpet'
 gem 'twitter'
 gem 'chronic'
 gem 'pygments.rb'
 
 group :assets do
-  gem 'coffee-rails', '~> 3.1.1'
-  gem 'uglifier',     '>= 1.0.3'
+  gem 'coffee-rails',      '~> 3.1.1'
+  gem 'uglifier',          '>= 1.0.3'
 end
 
 group :development, :test do
@@ -21,7 +21,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'ruby_gntp'
-  gem 'spork',        '> 0.9.0.rc'
+  gem 'spork',             '> 0.9.0.rc'
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'guard-spork'

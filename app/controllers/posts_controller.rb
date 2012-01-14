@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  caches_page :index, :show
 
   def index
     @posts = Post.where(:published => true).order('published_at DESC')

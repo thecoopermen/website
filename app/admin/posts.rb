@@ -1,4 +1,8 @@
 ActiveAdmin.register Post do
+  controller do
+    cache_sweeper :post_sweeper
+  end
+
   index do
     column :title
     column :subtitle
