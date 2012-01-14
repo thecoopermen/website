@@ -9,6 +9,7 @@ class PostSweeper < ActionController::Caching::Sweeper
     # a hacky nightmare
     post_index = { controller: "/posts", action: "index", only_path: true }
     post_show  = { controller: "/posts", action: "show", id: post.to_param, only_path: true }
+    post_rss   = { controller: "/posts", action: "index", format: 'rss', only_path: true }
 
     expire_page "/index"
     expire_page Rails.application.routes.url_helpers.url_for(post_index)
