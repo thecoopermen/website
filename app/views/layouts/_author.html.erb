@@ -1,14 +1,12 @@
 <section class="author">
-  <%= link_to author.twitter_url do %>
-    <div class="avatar">
-      <%= icon_for(author) %>
-    </div>
-    <div class="author-info">
-      <hgroup>
-        <h4><%= author.name %></h4>
-        <em><%= author.twitter %></em>
-      </hgroup>
-      <p><%= author.bio %></p>
-    </div>
-  <% end %>
+  <div class="avatar">
+    <%= icon_for(author) %>
+  </div>
+  <div class="author-info">
+    <hgroup>
+      <h4><%= author.name %></h4>
+      <em><%= link_to author.twitter, author.twitter_url %></em>
+    </hgroup>
+    <p><%= Redcarpet::Markdown.new(MarkdownRenderer.new({ :filter_html => true })).render(author.bio).html_safe %></p>
+  </div>
 </section>

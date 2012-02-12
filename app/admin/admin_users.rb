@@ -1,4 +1,8 @@
 ActiveAdmin.register AdminUser, :as => 'Author' do
+  controller do
+    cache_sweeper :author_sweeper
+  end
+
   index do
     column :name
     column 'Twitter Username', :twitter
