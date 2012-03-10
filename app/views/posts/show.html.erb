@@ -18,7 +18,7 @@
           Posted on: <%= @post.published_at.to_s(:post) %>
         <% end %>
       </aside>
-      <%= @post.html_content %>
+      <%= @post.content.html_safe %>
     </article>
   </div>
 </div>
