@@ -23,3 +23,5 @@
 
 # Ignore development artifacts
 *.tmproj
+
+.sass-cache/*

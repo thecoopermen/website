@@ -85,3 +85,10 @@ body {
     font-size: #{$font-size * ($f / $font-size) / $em}em;
     line-height: #{$line * ($l / $line) / ($font-size * ($f / $font-size) )}em;
 }
+
+article {
+  aside {
+    @include font(11, 18);
+    @extend .serif-italic;
+  }
+}

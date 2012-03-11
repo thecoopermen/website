@@ -40,6 +40,12 @@
 
 /* css3 */
 
+@mixin rounded( $radius: 5px ) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
 @mixin rounded_corner( $magnitude, $x, $y ) {
     -moz-border-radius-#{$y}#{$x}: $magnitude;
     -webkit-border-#{$y}#{$x}: $magnitude;

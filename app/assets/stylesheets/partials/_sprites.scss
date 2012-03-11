@@ -1,0 +1,54 @@
+
+/* ----------------------------------------------------------------
+
+[Table of contents] - Sprites.
+
+    0.General
+    1.Icons
+
+---------------------------------------------------------------- */
+
+
+
+/* 0.`General
+---------------------------------------------- */
+
+.sprite {
+    @include inline-block( top );
+    overflow: hidden;
+	line-height: 0;
+    text-indent: 100%;
+}
+
+.icon-demo {
+	@extend .sprite;
+	background-image: url('coopermen-sprite-demo.png');
+}
+
+
+
+/* 4.`Icons
+---------------------------------------------- */
+
+.cog-medium {
+	background-position: -0px -0px;
+	width: 46px;
+	height: 46px;
+
+}
+
+.cog-medium-bgblack {
+	background-position: -54px -0px;
+	width: 46px;
+	height: 46px;
+}
+
+.cog-medium-bgblack-grey {
+	@extend .cog-medium-bgblack;
+	background-color: #fff;
+	@include transition(background-color);
+
+	&:hover {
+		background-color: $orange;
+	}
+}

@@ -1,28 +1,25 @@
+/* ----------------------------------------------------------------
 
-// Title:   Master styles for screen media
-// Author: Jordan Cooperman, jordancooperman@gmail.com
-// Year: 2011
+Title:   Master styles for screen media
+Author: Jordan Cooperman, jordancooperman@gmail.com
+Year: 2011
 
-//////////////////////////////////////////////////////////////////
+----------------------------------------------------------------
 
-// Table of contents
+[Table of contents] - A map of our gounds.
 
-//////////////////////////////////////////////////////////////////
+  0.General
+  1.Navigation
+  2.Layouts
+  3.Extensible Classes
+  4.Demos
 
-// 0.General
-// 1.Navigation
-// 2.Layouts
-// 3.Extensible Classes
-// 4.Sprites, Icons
-
-//////////////////////////////////////////////////////////////////
+---------------------------------------------------------------- */
 
 
-///////////////////////////////////////
 
-// 0.`General
-
-///////////////////////////////////////
+/* 0.`General
+---------------------------------------------- */
 
 $yellow: #f7c76e;
 $tan: #d8c191;
@@ -85,7 +82,9 @@ strong {
 }
 
 pre {
+    clear: both;
     padding-left: $base/2;
+    margin-bottom: $base/2;
     @extend .meslo;
     color: $tan;
 }
@@ -108,11 +107,9 @@ pre {
 }
 
 
-///////////////////////////////////////
 
-// 2.`Layout
-
-///////////////////////////////////////
+/* 2.`Layout
+---------------------------------------------- */
 
 html,
 body {
@@ -301,7 +298,7 @@ body {
                 float: left;
                 margin: 0 auto;
                 margin-right: $base;
-                margin-bottom: $base/4;
+                margin-bottom: $base;
                 color: $cream;
 
                 img {
@@ -311,7 +308,7 @@ body {
 
                 figcaption {
                     float: right;
-                    @extend .small;
+                    @extend .tiny;
                 }
             }
 
@@ -427,11 +424,9 @@ footer#global {
 }
 
 
-///////////////////////////////////////
 
-// 3.`Extensible Classes
-
-///////////////////////////////////////
+/* 3.`Extensible Classes
+---------------------------------------------- */
 
 .group {
     min-height: 1px;
@@ -451,16 +446,43 @@ footer#global {
     background-repeat: repeat-x;
 }
 
-///////////////////////////////////////
-
-// 4.`Sprites, Icons
-
-///////////////////////////////////////
-
 .rss {
     background-image: url('icon-rss.png');
     background-repeat: no-repeat;
     background-position: left center;
 }
 
+
+
+/* 4.`Demos
+---------------------------------------------- */
+
+.demo {
+  padding: $base/2;
+  margin: 0 auto;
+  margin-bottom: $base;
+  background-color: #000;
+  text-align: center;
+  @include rounded(3px);
+}
+
+.demo-aside {
+  @extend .demo;
+  float: left;
+}
+
+.icon-and-desc {
+  padding: $base/2 0;
+}
+
+.icon-demo {
+  margin: 0 $base/2;
+}
+
+.icon-demo-desc {
+  padding-top: $base/4;
+  margin: 0;
+}
+
+@import "partials/sprites";
 @import "partials/media";

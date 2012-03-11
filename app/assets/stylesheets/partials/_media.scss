@@ -1,11 +1,9 @@
 
-
-
 @media screen and (min-width: 30em ) {
 
     body {
-        font-size: #{$font-size * 1.125 / $em}em;
-        line-height: #{$line  / $font-size * 1.125}em;
+      @include font(18, 30);
+      @include transition(all);
     }
 
     h1 {
@@ -51,7 +49,7 @@
         #title {
 
             hgroup {
-                @include grid( 12 );
+                @include grid( 14 );
                 float: none;
                 margin: 0 auto;
             }
@@ -59,7 +57,7 @@
 
         .content {
             article {
-                @include grid( 12 );
+                @include grid( 14 );
                 float: none;
                 margin: 0 auto;
             }
@@ -166,7 +164,7 @@
                     right: 100%;
                     width: 6em;
                     text-align: right;
-                    margin-right: 1em;
+                    margin-right: 2em;
                 }
 
             }
@@ -175,6 +173,31 @@
 }
 
 @media screen and ( min-width: 50em ) {
+
+    body {
+      @include font(21, 32);
+    }
+
+    #article-page {
+
+        #title {
+
+            hgroup {
+              @include grid( 11 );
+              margin: 0 auto;
+              float: none;
+            }
+        }
+
+        .content {
+
+            article {
+              @include grid( 11 );
+              margin: 0 auto;
+              float: none;
+            }
+        }
+    }
 
     .articles {
 
