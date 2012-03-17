@@ -7,6 +7,6 @@
       <h4><%= author.name %></h4>
       <em><%= link_to author.twitter, author.twitter_url %></em>
     </hgroup>
-    <p><%= author.bio %></p>
+    <p><%= author.bio.html_safe %></p>
   </div>
 </section>
